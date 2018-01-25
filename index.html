@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Веб-студия</title>
+<link href="http://allfont.ru/allfont.css?fonts=roboto-regular" rel="stylesheet" type="text/css" />
+<link href="http://allfont.ru/allfont.css?fonts=roboto-bold" rel="stylesheet" type="text/css" />
+<link href="http://allfont.ru/allfont.css?fonts=pt-sans" rel="stylesheet" type="text/css" />
+<link href="http://allfont.ru/allfont.css?fonts=pt-sans-bold" rel="stylesheet" type="text/css" />
+
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="css/style.min.css">
+<link rel="stylesheet" href="css/adaptive.min.css">
+<style type="text/css">
+.wrapper {
+margin:auto;
+height: 100%;    
+}
+#header {
+position:relative;
+min-height:846px;
+background:url(img/main.jpg) no-repeat;
+background-size:cover;
+background-position:center center
+}
+#img_logo {
+display: block;
+width: 100px;
+text-align: left;
+margin-top: 13px;
+}
+.navbar.navbar-default {
+background-color: transparent!important;
+border: none;  
+}
+.navbar-default .navbar-nav > li > a { 
+padding-right: 82px!important;
+font-size: 18px!important;
+font-family: 'PT Sans Bold', arial;
+color: rgb(255, 255, 255);  
+line-height: 1.2;
+text-align: center;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+color:#fc7900!important; 
+}
+.header__langChoice {
+background-color: transparent;
+color: #fff;
+border: 1px solid #fff;
+display: inline-block;
+border-radius: 30px;
+padding: 8px;
+float: right;    
+border-width: 1.49px solid #fff; 
+}
+.header__option {
+color: #000;
+text-align: center;
+}
+.header__phone {
+color: #fff;
+display: inline-block;    
+margin-top: 27px;
+font-size: 18px;
+font-family: 'PT Sans Bold', arial;
+color: #fff;  
+line-height: 1.2;
+text-align: right;  
+}
+.header__activity {
+font-size: 3rem;
+font-family: 'Roboto Bold', arial;
+color: #fff;
+font-weight: bold;
+text-transform: uppercase;
+line-height: 1.2;
+text-align: left;
+margin-top: 15%;
+}
+.header__subactivity {
+font-size: 36px;
+font-family: 'Roboto Bold', arial;
+color: rgb(255, 255, 255);  
+line-height: 1.2;
+text-align: left;
+margin-top: 35px;
+margin-bottom: 35px;
+}
+.header__order {
+background-color: #fc7900;  
+width: 338px;
+height: 70px;
+border-radius: 20px;
+color: #fff;
+border: 1px solid #fc7900;  
+text-transform: uppercase;
+font-size: 24px;
+font-family: 'Roboto Bold', arial;
+color: rgb(255, 255, 255);  
+margin-right: 52px;
+position: relative;
+}
+
+.header__order:hover {
+border-radius: 20px; 
+-moz-box-shadow:0 0 46px #ffffbe;
+-webkit-box-shadow:0 0 46px #ffffbe;
+box-shadow:0 0 46px #ffffbe;  
+}
+a.header__projects { 
+border-radius: 20px;
+background-color: transparent;
+font-size: 24px;
+font-family: 'Roboto Bold', arial;
+text-transform: uppercase;  
+text-align: center;
+width: 338px;
+height: 70px;  
+color: #fff;
+border: 4.96px solid #fff;   
+padding: 15px;
+display: inline-block;
+}
+
+a.header__projects:hover { 
+border-width: 4.96px;
+border-color: rgb(252, 121, 0);
+border-style: solid;
+border-radius: 20px;
+background-color: rgb(252, 121, 0);
+
+color: #000;
+-moz-box-shadow:0 0 30px #ffffbe;
+-webkit-box-shadow:0 0 30px #ffffbe;
+box-shadow:0 0 30px #ffffbe;
+}
+</style>     
+</head>
+<body>
+<div class="wrapper"> 
+<header id ="header">
+<div class="container">
+  <nav class="navbar navbar-default">
+    <!-- <div class="container-fluid"> -->     
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+          <span class="sr-only">Меню</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span >Меню </span>
+        </button>      
+      </div> 
+      <div class="col-md-12">
+          <div class="col-md-2">
+          <img id="img_logo" src="img/logo.png" alt="Логотип">
+          </div>        
+          <div class="col-md-7">          
+           <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+              <li><a href="#uslug">Наши услуги</a></li>
+              <li><a  href="#goods">Наши работы</a></li>
+              <li><a href="#sliders">Контакты</a></li>              
+            </ul>
+         </div>     
+      </div>
+       <div class="col-md-3">       
+          <span class="header__phone"> +7 (450) 999 99 99</span>
+         
+          <div class="dropdown sity">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="v_sity">RUS</span> <i class="fa fa-map-marker" aria-hidden="true"></i></a>
+            <ul id="sity" class="dropdown-menu">
+              <li><a >RUS</a></li>
+              <li><a >ENG</a></li>             
+              
+              </ul>
+          </div>
+       </div>       
+    </div><!--/.container-12 -->   
+  </nav>
+    <h1 class="header__activity">Разработка сайтов <br>
+    и мобильных приложений</h1>
+    <h2 class="header__subactivity">Для Вашего бизнеса!</h2>
+    <div class="col-md-12">
+    <button class="header__order callback" data-target=".modal_callback" data-toggle="modal">Заказать</button>
+    <a class="header__projects" href="#projects">Посмотреть работы</a>
+    </div>
+ </div>
+</header>
+ 
+<!-- Блок с услугами  -->
+<div id="uslug" class="container-fluid"> 
+  <div class="container"> 
+    <div  class="col-md-4 col-sm-4"> 
+          <div  class="advantages">
+            <div class="adv adv1"></div>
+          </div>
+           <p class="adv_text">Разработка сайтов </p>
+           <p class="adv_text_desc">Мы умеем <br>делать крутые <br> сайты</p>
+         </div>
+         <div class="col-md-4 col-sm-4"> 
+          <div class="advantages">
+            <div class="adv adv2"></div>
+          </div>
+           <p class="adv_text">Раработка мобильных приложений </p>
+            <p class="adv_text_desc">Для Apple iOS и <br>Google Android<br> OS</p>
+         </div>
+         <div  class="col-md-4 col-sm-4"> 
+          <div class="advantages">
+            <div class="adv adv3"></div>
+          </div>
+           <p class="adv_text">Digital Marketing </p>
+           <p class="adv_text_desc">Продвижение <br>бренда в<br> цифровом<br> пространстве</p>
+         </div>
+         <div class="col-md-4 col-sm-4"> 
+          <div class="advantages">
+            <div class="adv adv4"></div>
+          </div>
+           <p class="adv_text">Разработка ПО </p>
+           <p class="adv_text_desc">Для решения <br>сложных и<br> комплексных<br> задач</p>
+         </div>
+         <div class="col-md-4 col-sm-4"> 
+          <div class="advantages">
+            <div class="adv adv5"></div>
+          </div>
+           <p class="adv_text">Интеграция </p>
+           <p class="adv_text_desc">Внедрим <br>комплексные<br> решения</p>
+         </div>
+         <div class="col-md-4 col-sm-4"> 
+          <div class="advantages">
+            <div class="adv adv6"></div>
+          </div>
+           <p class="adv_text">Сопровождение </p>
+           <p class="adv_text_desc">В течении всего<br> срока жизни<br> проекта</p>
+         </div>
+        </div>     
+</div>
+
+<div id="projects" class="who portfolio">
+  <div class="container">
+    <h2 class="portfolio_section">Наши работы</h2>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="item top">
+          <div class="col-md-4 col-sm-4 pad">            
+            <div class="image">
+              <div class="name">Интернет-магазин по продажам <br>Торгового оборудования</div>
+              <img src="img/portfolio_item1.jpg" alt="Наши работы">
+              <div class="hov">
+                <a data-target=".modal_obj" data-toggle="modal" class="h-btn">Интернет-магазин по продажам <br>Торгового оборудования</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item top">
+          <div class="col-md-4 col-sm-4 pad">           
+            <div class="image">
+               <div class="name">Лендинг по продажам <br> автомоек</div>
+             <img src="img/portfolio_item1.jpg" alt="Наши работы">
+              <div class="hov">
+                <a data-target=".modal_serv" data-toggle="modal" class="h-btn">Лендинг по продажам <br> автомоек</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item top">
+          <div class="col-md-4 col-sm-4 pad">          
+            <div class="image">
+                <div class="name">Интернет-магазин по <br> продажам Поликарбоната</div>
+              <img src="img/portfolio_item1.jpg" alt="Наши работы">
+              <div class="hov">
+                <a data-target=".modal_serv" data-toggle="modal" class="h-btn">Интернет-магазин по <br> продажам Поликарбоната</a>
+              </div>
+            </div>
+          </div>
+        </div>   
+        <div class="row">     
+      <div class="col-md-12 col-sm-12">
+        <div class="item top">
+          <div class="col-md-4 col-sm-4 pad">           
+            <div class="image">
+               <div class="name">Корпоративный сайт <br>+ магазин</div>
+             <img src="img/portfolio_item1.jpg" alt="Наши работы">
+              <div class="hov">
+                <a data-target=".modal_serv" data-toggle="modal" class="h-btn">Корпоративный сайт <br>+ магазин</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item top">
+          <div class="col-md-4 col-sm-4 pad">           
+            <div class="image">
+               <div class="name">Мобильное приложение</div>
+              <img src="img/portfolio_item1.jpg" alt="Наши работы">
+              <div class="hov">
+                <a data-target=".modal_obj" data-toggle="modal" class="h-btn">Мобильное приложение</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item top">
+          <div class="col-md-4 col-sm-4 pad">           
+            <div class="image">
+               <div class="name">Система автоматизации <br> производством</div>
+              <img src="img/portfolio_item1.jpg" alt="Наши работы">
+              <div class="hov">
+                <a data-target=".modal_obj" data-toggle="modal" class="h-btn">Система автоматизации <br> производством</a>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+</div>
+
+<div class="container add_question">    
+    <div class="text-center col-md-12">
+       <p class="form_title add_sugest">ОСТАЛИСЬ ВОПРОСЫ? </p>
+      </div>
+      <div class="text-center">
+           <p class="form_title ">Получите <span  class="green_text upper">бесплатную</span> консультацию!</p>
+      </div>
+      <div class="clearfix">
+      </div>
+      <div class="col-md-12 text-center  ">
+           <form class="get_free"> 
+              <input placeholder="Имя" onfocus="this.placeholder = ''" onblur="this.placeholder ='Имя'" name="name" class="name" type="text" value="" />
+              <input placeholder="Телефон" onfocus="this.placeholder = ''" onblur="this.placeholder ='Телефон'" name="phone" class="phone" type="text" required="required" value="" />
+              <input class="more_button hvr_out_hor_change_color" type="submit" name="formFooter" value="Задать вопрос" />
+              <div class="clearfix"></div>    
+      </form>  
+  
+    </div>
+  </div>
+
+<div class="clearfix"></div>
+<div class="container-fluid">
+   <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A89d2109d494ce96ddbad0c5739f6bbe97c01c7a8cc9ec2f9c27e3ba04d1f4e0b&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>   
+</div> 
+
+
+<footer class="container-fluid footer">
+  	<div class="container">
+  		<div class="row">
+       		<div class="col-md-12">
+       			<div class="col-md-4">
+       				<img id="img_logo" src="img/logo.png" alt="Логотип">
+       				<a class="policy">Политика конфиденциальности</a>
+       			</div>
+       			<div class="col-md-4">
+       				<p class="footer__sections">Разделы</p>
+       				<ul class="footer__menu">
+       					<li><a href="#uslug"> Услуги компании</a> </li>
+       					<li><a href="#uslug"> Наши работы</a> </li>
+       					<li><a href="#uslug"> Схема работы</a> </li>
+       					<li><a href="#uslug"> Отзывы</a> </li>       					
+       					<li><a href="#uslug"> Заказать звонок</a> </li>       					
+       				</ul>
+
+       			</div>
+       			<div class="col-md-4">
+       				<p class="footer__sections">Контакты</p>
+       				<div class="col-md-2">
+       				   <span><img class="footer_icon" src="img/footer_icon1.png"></span>
+       			   </div>
+       			   <div class="col-md-10">
+       				   <span class="footer__contsctsText">г. Москва, улица Пушкина,<br>корпус 4а, станция метро<br> ВДНХ</span>
+       			    </div>
+       			    <div class="col-md-2">
+       				   <span><img class="footer_icon" src="img/footer_icon2.png"></span>
+       			   </div>
+       			   <div class="col-md-10">
+       				   <span class="footer__contsctsText">+ 7(450) 999 99 99</span>
+       			    </div>
+       			    <div class="col-md-2">
+       				   <span><img class="footer_icon" src="img/footer_icon3.png"></span>
+       			   </div>
+       			   <div class="col-md-10">
+       				   <span class="footer__contsctsText">velesgroupp@gmail.com</span>
+       			    </div>
+       			</div>
+  				
+  			</div>
+  		</div>
+    </div>
+</footer>
+
+
+<!-- callback -->
+<div class="modal fade modal_callback" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="titles">
+          Заказ обратного<br>звонка
+        </div>
+        <div class="form mt-20">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label class="col-sm-3 col-sm-offset-1 control-label">Ф.И.О.*</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control"  placeholder="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 col-sm-offset-1 control-label">Телефон*:</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control phones" placeholder="+7 (000) 000-00-00">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-9 col-sm-offset-1">
+                <button type="submit" class="more_btn mt-20">Перезвоните мне</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- модалка ответ "Ваша заявка отправлена"-->
+<div class="modal fade modal_otvet" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="titles">
+          Ваша заявка<br>отправлена
+        </div>
+        <div class="desks">
+          Наши менеджеры свяжутся с Вами<br>в ближайшее время
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- модалка ответ "Ваш запрос отправлен"-->
+<div class="modal fade modal_zapros" tabindex="-1" role="dialog" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="titles">
+          Ваш запрос<br>отправлен
+        </div>
+        <div class="desks">
+          Наши менеджеры свяжутся с Вами<br>в ближайшее время
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- модалка на рассчет калькулятора -->
+<div class="modal fade modal_calculate"  tabindex="-1" role="dialog" >
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content big">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="h-block">
+            <div class="mod-titles">
+              Калькулятор предварительного расчета стоимости
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="form mt-20">
+            <form class="form-horizontal float-left col-sm-12">
+              <div class="form-group">
+              <div  class="col-sm-6 label-block">Площадь потолка (кв.м.)</div>
+                <div class="col-sm-5">
+                  <div class="calc">
+                    <div class="minus">
+                      <div class="image">
+                        <img src="img/content/calculate/–.png" alt="">
+                      </div>
+                    </div>
+                    <div class="val-calculated">
+                      <input id="calc-input" type="text" placeholder="0" style="">
+                    </div>
+                    <div class="plus" >
+                      <div class="image">
+                        <img src="img/content/calculate/+.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-12 label-block">Категория потолка</div>
+                <div  class="col-sm-12 ">
+                  <div class="col-sm-4 form-input-img-block">
+                    <label><input type="radio" name="r2" value="option">эконом</label>
+                    <div class="image">
+                      <img src="img/content/calculate/econom.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="col-sm-4 form-input-img-block">
+                    <label><input type="radio" name="r2" value="option">стандарт</label>
+                    <div class="image">
+                      <img src="img/content/calculate/standart.png" alt="">
+                    </div>
+                  </div>
+                  <div class="col-sm-4 form-input-img-block">
+                    <label><input type="radio" name="r2" value="option">премиум</label>
+                    <div class="image">
+                      <img src="img/content/calculate/premium.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div  class="col-sm-12 label-block"> Время выполнения работ</div>
+                <div  class="col-sm-12 form-input-block">
+                  <label class="l-radio"><input type="radio" name="r1" value="option"> срочно</label>
+                  <label class="l-radio"><input type="radio" name="r1" value="option"> 1 неделя</label>
+                  <label class="l-radio"><input type="radio" name="r1" value="option"> 2 недели</label>
+                  <label class="l-radio"><input type="radio" name="r1" value="option"> не знаю</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div  class="col-sm-12 label-block "> Введите Ваши контактные данные</div>
+                <div  class="col-sm-12 info">
+                  <div class="col-sm-5 input-info">
+                      <label  class="control-label">Ф.И.О.:
+                        <input type="text" class="form-control"  placeholder="">
+                      </label>
+                  </div>
+                  <div class="col-sm-5 input-info">
+                      <label  class="control-label">Телефон:
+                        <input type="text" class="form-control phones" placeholder="+7 (000) 000-00-00">
+                      </label>
+
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-12" style="text-align: center">
+                  <button type="submit" class="more_btn mt-20">Сделайте расчет</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- модалка "Отзыв" -->
+<div class="modal fade modal_recall"  tabindex="-1" role="dialog" >
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content big">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="h-block">
+            <div class="mod-titles">
+              Отзыв от 12 ноября 2016 г.
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="col-sm-4">
+              <div class="image-photo">
+                <img src="img/content/recall/1.jpg" alt="">
+              </div>
+            </div>
+            <div class="col-sm-8 text-content">
+              <p>
+                 Задачи: Разработка дизайна и проекта помещений по производству кондитерских изделий. При расширении производства точно обратимся в данную организацию!
+              </p>
+                <br>
+                <div class="author">
+                    <div class="mod-titles">
+                        Тимофей Елизаров
+                    </div>
+                    <div class="desc">
+                        ООО "New crystal"
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+              <div class="image-doc">
+                  <img src="img/content/recall/letter.jpg" alt="">
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade modal_recall2"  tabindex="-1" role="dialog" >
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content big">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="h-block">
+            <div class="mod-titles">
+              Отзыв от 6 июня 2016 г.
+            </div>
+          </div>
+            <div >
+              
+                <img class="col-lg-3 col-md-3 col-sm-3" src="img/content/recall/4.jpg" alt="">
+              
+            </div>
+            <div class=" col-lg-6 col-md-6 col-sm-6 text-content">
+              <p>
+                 <strong> Давно хотела создать свой собственный стиль. Очень много консультировалась с различными компаниями. В ООО "Евростайл" меня направила подруга, сказав, что там дизайнеры очень внимательные. Именно это в сочетании с профессионализмом мне и нужно было, так как идей было много. Безумно рада, что все получилось. Не устаю благодарить! </strong>
+              </p>
+                <br>
+                <div class="author">
+                    <div >
+                       <strong> Елена Макарова</strong>
+                    </div>
+                    
+                </div>
+            </div>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+<!-- модалка "Письмо" -->
+<div class="modal fade modal_recall_mail"  tabindex="-1" role="dialog" >
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content big">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="h-block">
+            <div class="mod-titles">
+              Отзыв от 12 ноября 2016 г.
+            </div>
+          </div>
+          <div class="col-sm-12" style="text-align: center">
+              <div class="image-doc">
+                  <img src="img/content/recall/letter.jpg" alt="">
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- модалка на заявку "услуг"-->
+<div class="modal fade modal_serv"  tabindex="-1" role="dialog" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content small">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="form">
+          <div class="titles">
+            Заявка на услуги
+          </div>
+          <div class="desks">
+            Оставьте свои контактные данные
+и наши менеджер свяжется
+с вами в ближайшее время
+          </div>
+          <form class="form-horizontal">
+            <div class="form-group">
+              <div class="col-sm-9 col-sm-offset-1">
+              <div class="interes"> Меня интересует: </div>
+                <select class="form-control">
+                  <option>дизайн</option>
+                  <option>подбор материалов</option>
+                  <option>консультация</option>
+                  <option>монтаж</option>
+                  <option>комплекс работ</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 col-sm-offset-1 control-label">Ваше имя.*</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control"  placeholder="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 col-sm-offset-1 control-label">Компания:</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 col-sm-offset-1 control-label">Телефон*:</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control phones" placeholder="+7 (000) 000-00-00">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 col-sm-offset-1 control-label">Email*:</label>
+              <div class="col-sm-6">
+                <input type="email" class="form-control" placeholder="login@domain.ru">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-9 col-sm-offset-1">
+                * - Обязательные поля для заполнения
+              </div>
+              <div class="col-sm-9 col-sm-offset-1">
+                <button type="submit" class="more_btn mt-20">Отправить заявку</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- модалка на заявку "заказать "систему видеонаблюдения"-->
+<div class="modal fade modal_serv_video"  tabindex="-1" role="dialog" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content small">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="form">
+          <div class="titles">
+            Заказать систему видеонаблюдения
+          </div>
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label class="col-sm-3 col-sm-offset-1 control-label">Ваше имя:</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control"  placeholder="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 col-sm-offset-1 control-label">Телефон:</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control phones" placeholder="+7 (000) 000-00-00">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-9 col-sm-offset-1">
+                <button type="submit" class="more_btn mt-20">Отправить заявку</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- модалка объекты -->
+<div class="modal fade modal_obj" tabindex="-1" role="dialog" >
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content big">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="row">
+        <div class="col-md-7">
+          <div class="big_img">
+            <img id="img-big" alt="" src="img/content/ready/1.jpg">
+          </div>
+          <div class="small_img">
+            <div class="col-md-3 col-sm-3 col-xs-6">
+                <img alt="" src="img/content/ready/2.jpg" >
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6">
+                <img alt="" src="img/content/ready/3.jpg">
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6">
+                <img alt="" src="img/content/ready/4.png" >
+            </div>
+            
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="title">Монтаж потолка</div>
+          <div class="name">июнь 2016 года.</div>
+          <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</div>
+          <div class="way">Вам понравился этот проект?</div>
+          <div class="zak"><a class="more_btn" href="">Хочу заказать такой же</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/jQueryFormStyler-master/jquery.formstyler.min.js"></script>
+    <script src="js/scrollspy.min.js"></script>
+	<script src="js/script.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      function getFile(){
+        document.getElementById("upfile").click();
+      }
+      function sub(obj){
+        var file = obj.value;
+        var fileName = file.split("\\");
+
+        if (fileName[fileName.length-1]) {
+          fileName = fileName[fileName.length-1];
+        } else {
+          fileName = 'Обзор';
+        }
+
+        document.getElementById("upload_file").innerHTML = fileName;
+        event.preventDefault();
+      }
+    </script>
+  </body>
+</html>
