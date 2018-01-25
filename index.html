@@ -83,7 +83,7 @@ line-height: 1.2;
 text-align: right;  
 }
 .header__activity {
-font-size: 3rem;
+font-size: 48px;
 font-family: 'Roboto Bold', arial;
 color: #fff;
 font-weight: bold;
@@ -143,7 +143,6 @@ border-color: rgb(252, 121, 0);
 border-style: solid;
 border-radius: 20px;
 background-color: rgb(252, 121, 0);
-
 color: #000;
 -moz-box-shadow:0 0 30px #ffffbe;
 -webkit-box-shadow:0 0 30px #ffffbe;
@@ -173,14 +172,14 @@ box-shadow:0 0 30px #ffffbe;
           <div class="col-md-7">          
            <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
-              <li><a href="#uslug">Наши услуги</a></li>
-              <li><a  href="#goods">Наши работы</a></li>
-              <li><a href="#sliders">Контакты</a></li>              
+              <li><a href="#service">Наши услуги</a></li>
+              <li><a  href="#projects">Наши работы</a></li>
+              <li><a href="#contacts">Контакты</a></li>              
             </ul>
          </div>     
       </div>
        <div class="col-md-3">       
-          <span class="header__phone"> +7 (450) 999 99 99</span>
+          <span class="header__phone">+7(915)-081-58-25</span>
          
           <div class="dropdown sity">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="v_sity">RUS</span> <i class="fa fa-map-marker" aria-hidden="true"></i></a>
@@ -204,7 +203,7 @@ box-shadow:0 0 30px #ffffbe;
 </header>
  
 <!-- Блок с услугами  -->
-<div id="uslug" class="container-fluid"> 
+<div id="service" class="container-fluid"> 
   <div class="container"> 
     <div  class="col-md-4 col-sm-4"> 
           <div  class="advantages">
@@ -331,29 +330,220 @@ box-shadow:0 0 30px #ffffbe;
    </div>
 </div>
 
-<div class="container add_question">    
-    <div class="text-center col-md-12">
-       <p class="form_title add_sugest">ОСТАЛИСЬ ВОПРОСЫ? </p>
-      </div>
-      <div class="text-center">
-           <p class="form_title ">Получите <span  class="green_text upper">бесплатную</span> консультацию!</p>
-      </div>
-      <div class="clearfix">
-      </div>
-      <div class="col-md-12 text-center  ">
-           <form class="get_free"> 
-              <input placeholder="Имя" onfocus="this.placeholder = ''" onblur="this.placeholder ='Имя'" name="name" class="name" type="text" value="" />
-              <input placeholder="Телефон" onfocus="this.placeholder = ''" onblur="this.placeholder ='Телефон'" name="phone" class="phone" type="text" required="required" value="" />
-              <input class="more_button hvr_out_hor_change_color" type="submit" name="formFooter" value="Задать вопрос" />
+<div id="questions" class="container-fluid question">    
+  <div class="container ">
+       <p class="form_client">Оставьте заявку </p>    
+       <p class="form_clientReply">и мы свяжемся с Вами в течение часа</p>     
+      <div class="clearfix"> </div>      
+      <div class="col-md-12">
+           <form class="make_order">
+              <input placeholder="Имя" name="name" class="form_inputs" type="text" required="required"/>
+              <input placeholder="Телефон" name="phone" class="form_inputs" type="text" required="required" />
+              <input class="form__backcall" type="submit" name="formFooter" value="Оставить заявку" />
               <div class="clearfix"></div>    
-      </form>  
-  
-    </div>
+      </form> 
+      </div>
   </div>
+</div>
+
+
+  <div class="container-fluid" id="steps">
+    <div class="container">
+      <h2 class="schema">Схема нашей работы</h2>
+       <h3 class="schema__sub">Можно несколько слов о том, что для Вас трудится целая <br> команда профессионалов</h3>
+      <div class="row">
+  	   <div class="col-md-12 schema__steps">
+       
+         <div class="col-md-2">
+          <p class="steps__title">Шаг 1</p>
+         </div>
+
+         <div class="col-md-2">
+          <p class="steps__title">Шаг 2</p>
+         </div>
+
+         <div class="col-md-2">
+          <p class="steps__title">Шаг 3</p>
+         </div>
+
+         <div class="col-md-2">
+          <p class="steps__title">Шаг 4</p>
+         </div>
+
+         <div class="col-md-2">
+          <p class="steps__title">Шаг 5</p>
+         </div>
+
+         <div class="col-md-2">
+          <p class="steps__title">Шаг 6</p>
+         </div>
+    </div><!-- 12md--> 
+   </div><!-- row-->
+
+   <div class="col-md-12 steps_schema">
+    <div class="white_block"></div>
+          <div class="row ">
+       <div class="col-md-12 ">
+       
+         <div class="col-md-2">
+          <p class="steps__round1">&#10004;</p>
+         </div>
+
+         <div class="col-md-2">
+          <p class="steps__round1">&#10004;</p>
+         </div>
+
+         <div class="col-md-2">
+          <p class="steps__round1">&#10004;</p>
+         </div>
+
+         <div class="col-md-2">
+          <p class="steps__round2">&#10004;</p>
+         </div>
+
+         <div class="col-md-2">
+          <p class="steps__round2">&#10004;</p>
+         </div>
+
+         <div class="col-md-2">
+          <p class="steps__round2">&#10004;</p>
+         </div>
+    </div><!-- 12md--> 
+   </div><!-- row-->
+    <div class="row">
+       <div class="col-md-12">
+       
+         <div class="col-md-2">
+          <p class="steps__text">Несколько слов  о шаге</p>
+         </div>
+
+         <div class="col-md-2">
+          <p class="steps__text">Несколько слов  о шаге</p>
+         </div>
+
+         <div class="col-md-2">
+          <p class="steps__text">Несколько слов  о шаге</p>
+         </div>
+
+         <div class="col-md-2">
+          <p class="steps__text">Несколько слов  о шаге</p>
+         </div>
+
+         <div class="col-md-2">
+          <p class="steps__text">Несколько слов  о шаге</p>
+         </div>
+
+         <div class="col-md-2">
+          <p class="steps__text">Несколько слов  о шаге</p>
+         </div>
+       </div>
+    </div><!-- 12md--> 
+   </div><!-- row-->   
+  </div><!-- container--> 
+</div><!-- container-fluid--> 
+
+
+     
+
+  <div class="container-fluid" id="review">
+    <div class="container">
+ <h2 class="portfolio_section">Отзывы клиентов</h2>
+
+ <div class="carousel-container">
+    
+      <div id="carousel">
+        <div class="carousel-feature">
+          <a href="#">
+            <div class="client_review ">
+              <p class="short_text">Огромная благодарность за услугу!</p>
+              <p class="review_text">По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+              <p class="review_sign">Пантелеймон Пантелемонович <br>
+              компания Такая-то managment group</p>
+              <img class="client_photo " alt="Клиент" src="img/client.jpg">
+            </div>         
+          </a>       
+        </div>
+        <div class="carousel-feature">
+          <a href="#">
+            <div class="client_review ">
+              <p class="short_text">Огромная благодарность за услугу!</p>
+              <p class="review_text">По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+              <p class="review_sign">Пантелеймон Пантелемонович <br>
+              компания Такая-то managment group</p>
+              <img class="client_photo " alt="Клиент" src="img/client.jpg">
+            </div>         
+          </a>       
+        </div>
+        <div class="carousel-feature">
+          <a href="#">
+            <div class="client_review ">
+              <p class="short_text">Огромная благодарность за услугу!</p>
+              <p class="review_text">По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+              <p class="review_sign">Пантелеймон Пантелемонович <br>
+              компания Такая-то managment group</p>
+              <img class="client_photo " alt="Клиент" src="img/client.jpg">
+            </div>         
+          </a>       
+        </div>
+        <div class="carousel-feature">
+          <a href="#">
+            <div class="client_review ">
+              <p class="short_text">Огромная благодарность за услугу!</p>
+              <p class="review_text">По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+              <p class="review_sign">Пантелеймон Пантелемонович <br>
+              компания Такая-то managment group</p>
+              <img class="client_photo " alt="Клиент" src="img/client.jpg">
+            </div>         
+          </a>       
+        </div>
+        <div class="carousel-feature">
+          <a href="#">
+            <div class="client_review ">
+              <p class="short_text">Огромная благодарность за услугу!</p>
+              <p class="review_text">По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+              <p class="review_sign">Пантелеймон Пантелемонович <br>
+              компания Такая-то managment group</p>
+              <img class="client_photo " alt="Клиент" src="img/client.jpg">
+            </div>         
+          </a>       
+        </div>
+      </div>
+    
+      <div id="carousel-left"><img src="img/arrow-left.png" /></div>
+      <div id="carousel-right"><img src="img/arrow-right.png" /></div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+
+  <section class="container-fluid" id="order">
+  	
+<div class="container ">
+  <div class="col-md-12">
+    <div class="col-md-6">
+       <p class="form_client2">Оставьте заявку </p>    
+       <p class="form_clientReply2">и мы свяжемся с Вами <br> в течение часа</p>   
+       </div>  
+      <div class="col-md-6"> 
+      <p class="form_client2">Введите </p>  
+      <p class="form_client2">свое имя <br> и номер телефона </p>    
+           <form class="make_order">
+              <input placeholder="Имя" name="name" class="form_inputs2" type="text" required="required"/>
+              <input placeholder="Телефон" name="phone" class="form_inputs2" type="text" required="required" />
+              <input class="form__backcall2" type="submit" name="formFooter" value="Оставить заявку" />
+              <div class="clearfix"></div>    
+      </form> 
+      
+    </div>
+      </div>
+  </div>
+  </section>
 
 <div class="clearfix"></div>
 <div class="container-fluid">
-   <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A89d2109d494ce96ddbad0c5739f6bbe97c01c7a8cc9ec2f9c27e3ba04d1f4e0b&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>   
+  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A09cbe83455164b133725cf8782aca9a9ced8820f29470c54d430b6c9e223f9e7&amp;width=100%25&amp;height=473&amp;lang=ru_RU&amp;scroll=false"></script>      
 </div> 
 
 
@@ -368,27 +558,27 @@ box-shadow:0 0 30px #ffffbe;
        			<div class="col-md-4">
        				<p class="footer__sections">Разделы</p>
        				<ul class="footer__menu">
-       					<li><a href="#uslug"> Услуги компании</a> </li>
-       					<li><a href="#uslug"> Наши работы</a> </li>
-       					<li><a href="#uslug"> Схема работы</a> </li>
-       					<li><a href="#uslug"> Отзывы</a> </li>       					
-       					<li><a href="#uslug"> Заказать звонок</a> </li>       					
+       					<li><a href="#service"> Услуги компании</a> </li>
+       					<li><a href="#projects"> Наши работы</a> </li>
+       					<li><a href="#steps"> Схема работы</a> </li>
+       					<li><a href="#review"> Отзывы</a> </li>       					
+       					<li><a href="#" data-target=".modal_callback" data-toggle="modal"> Заказать звонок</a> </li>       					
        				</ul>
 
        			</div>
        			<div class="col-md-4">
-       				<p class="footer__sections">Контакты</p>
+       				<p id="contacts" class="footer__sections">Контакты</p>
        				<div class="col-md-2">
        				   <span><img class="footer_icon" src="img/footer_icon1.png"></span>
        			   </div>
        			   <div class="col-md-10">
-       				   <span class="footer__contsctsText">г. Москва, улица Пушкина,<br>корпус 4а, станция метро<br> ВДНХ</span>
+       				   <span class="footer__contsctsText">г. Москва,<br> Пресненская набережная, 12,офис 28/16</span>
        			    </div>
        			    <div class="col-md-2">
        				   <span><img class="footer_icon" src="img/footer_icon2.png"></span>
        			   </div>
        			   <div class="col-md-10">
-       				   <span class="footer__contsctsText">+ 7(450) 999 99 99</span>
+       				   <span class="footer__contsctsText">+7(915)-081-58-25</span>
        			    </div>
        			    <div class="col-md-2">
        				   <span><img class="footer_icon" src="img/footer_icon3.png"></span>
@@ -814,13 +1004,24 @@ box-shadow:0 0 30px #ffffbe;
 </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <!-- <script src="js/jquery-1.7.min.js"></script> -->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.1.1.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/jquery.featureCarousel.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var carousel = $("#carousel").featureCarousel({
+          
+        });        
+      });
+    </script>
     <script src="js/jQueryFormStyler-master/jquery.formstyler.min.js"></script>
     <script src="js/scrollspy.min.js"></script>
 	<script src="js/script.min.js" charset="utf-8"></script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       function getFile(){
         document.getElementById("upfile").click();
       }
@@ -837,6 +1038,6 @@ box-shadow:0 0 30px #ffffbe;
         document.getElementById("upload_file").innerHTML = fileName;
         event.preventDefault();
       }
-    </script>
+    </script> -->
   </body>
 </html>
