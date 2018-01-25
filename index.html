@@ -11,6 +11,7 @@
 <link href="http://allfont.ru/allfont.css?fonts=pt-sans-bold" rel="stylesheet" type="text/css" />
 
 
+
 <!-- Bootstrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -24,6 +25,7 @@
 <![endif]-->
 <link rel="stylesheet" href="css/style.min.css">
 <link rel="stylesheet" href="css/adaptive.min.css">
+<link rel="stylesheet" type="text/css" href="wow-animation/animate.min.css">
 <style type="text/css">
 .wrapper {
 margin:auto;
@@ -205,6 +207,7 @@ box-shadow:0 0 30px #ffffbe;
 <!-- Блок с услугами  -->
 <div id="service" class="container-fluid"> 
   <div class="container"> 
+    <div class="row wow slideInUp" data-wow-duration="2s" data-wow-delay="0s" data-wow-offset="60">
     <div  class="col-md-4 col-sm-4"> 
           <div  class="advantages">
             <div class="adv adv1"></div>
@@ -226,6 +229,8 @@ box-shadow:0 0 30px #ffffbe;
            <p class="adv_text">Digital Marketing </p>
            <p class="adv_text_desc">Продвижение <br>бренда в<br> цифровом<br> пространстве</p>
          </div>
+       </div>
+       <div class="row wow slideInUp" data-wow-duration="2s" data-wow-delay="0s" data-wow-offset="60">
          <div class="col-md-4 col-sm-4"> 
           <div class="advantages">
             <div class="adv adv4"></div>
@@ -247,7 +252,8 @@ box-shadow:0 0 30px #ffffbe;
            <p class="adv_text">Сопровождение </p>
            <p class="adv_text_desc">В течении всего<br> срока жизни<br> проекта</p>
          </div>
-        </div>     
+        </div>
+      </div>     
 </div>
 
 <div id="projects" class="who portfolio">
@@ -272,7 +278,7 @@ box-shadow:0 0 30px #ffffbe;
                <div class="name">Лендинг по продажам <br> автомоек</div>
              <img src="img/portfolio_item1.jpg" alt="Наши работы">
               <div class="hov">
-                <a data-target=".modal_serv" data-toggle="modal" class="h-btn">Лендинг по продажам <br> автомоек</a>
+                <a data-target=".modal_obj" data-toggle="modal" class="h-btn">Лендинг по продажам <br> автомоек</a>
               </div>
             </div>
           </div>
@@ -283,7 +289,7 @@ box-shadow:0 0 30px #ffffbe;
                 <div class="name">Интернет-магазин по <br> продажам Поликарбоната</div>
               <img src="img/portfolio_item1.jpg" alt="Наши работы">
               <div class="hov">
-                <a data-target=".modal_serv" data-toggle="modal" class="h-btn">Интернет-магазин по <br> продажам Поликарбоната</a>
+                <a data-target=".modal_obj" data-toggle="modal" class="h-btn">Интернет-магазин по <br> продажам Поликарбоната</a>
               </div>
             </div>
           </div>
@@ -296,7 +302,7 @@ box-shadow:0 0 30px #ffffbe;
                <div class="name">Корпоративный сайт <br>+ магазин</div>
              <img src="img/portfolio_item1.jpg" alt="Наши работы">
               <div class="hov">
-                <a data-target=".modal_serv" data-toggle="modal" class="h-btn">Корпоративный сайт <br>+ магазин</a>
+                <a data-target=".modal_obj" data-toggle="modal" class="h-btn">Корпоративный сайт <br>+ магазин</a>
               </div>
             </div>
           </div>
@@ -518,8 +524,7 @@ box-shadow:0 0 30px #ffffbe;
 </div>
 
 
-  <section class="container-fluid" id="order">
-  	
+<section class="container-fluid" id="order">  	
 <div class="container ">
   <div class="col-md-12">
     <div class="col-md-6">
@@ -527,8 +532,8 @@ box-shadow:0 0 30px #ffffbe;
        <p class="form_clientReply2">и мы свяжемся с Вами <br> в течение часа</p>   
        </div>  
       <div class="col-md-6"> 
-      <p class="form_client2">Введите </p>  
-      <p class="form_client2">свое имя <br> и номер телефона </p>    
+      <p class="form_insert_upper">Введите </p>  
+      <p class="form_insert">свое имя <br> и номер телефона: </p>    
            <form class="make_order">
               <input placeholder="Имя" name="name" class="form_inputs2" type="text" required="required"/>
               <input placeholder="Телефон" name="phone" class="form_inputs2" type="text" required="required" />
@@ -542,7 +547,7 @@ box-shadow:0 0 30px #ffffbe;
   </section>
 
 <div class="clearfix"></div>
-<div class="container-fluid">
+<div id="map" class="container-fluid">
   <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A09cbe83455164b133725cf8782aca9a9ced8820f29470c54d430b6c9e223f9e7&amp;width=100%25&amp;height=473&amp;lang=ru_RU&amp;scroll=false"></script>      
 </div> 
 
@@ -553,7 +558,7 @@ box-shadow:0 0 30px #ffffbe;
        		<div class="col-md-12">
        			<div class="col-md-4">
        				<img id="img_logo" src="img/logo.png" alt="Логотип">
-       				<a class="policy">Политика конфиденциальности</a>
+       				<a data-target=".modal_policy" data-toggle="modal" class="policy">Политика конфиденциальности</a>
        			</div>
        			<div class="col-md-4">
        				<p class="footer__sections">Разделы</p>
@@ -601,25 +606,25 @@ box-shadow:0 0 30px #ffffbe;
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       <div class="modal-body">
         <div class="titles">
-          Заказ обратного<br>звонка
+          Заказ обратного звонка
         </div>
         <div class="form mt-20">
           <form class="form-horizontal">
             <div class="form-group">
-              <label class="col-sm-3 col-sm-offset-1 control-label">Ф.И.О.*</label>
+              
               <div class="col-sm-6">
-                <input type="text" class="form-control"  placeholder="">
+                <input type="text" class="form-control"  placeholder="Имя">
               </div>
             </div>
             <div class="form-group">
-              <label class="col-sm-3 col-sm-offset-1 control-label">Телефон*:</label>
+              
               <div class="col-sm-6">
-                <input type="text" class="form-control phones" placeholder="+7 (000) 000-00-00">
+                <input type="text" class="form-control phones" placeholder="Телефон">
               </div>
             </div>
             <div class="form-group">
               <div class="col-sm-9 col-sm-offset-1">
-                <button type="submit" class="more_btn mt-20">Перезвоните мне</button>
+                <button type="submit" class="form__backcall2">Заказать</button>
               </div>
             </div>
           </form>
@@ -664,96 +669,21 @@ box-shadow:0 0 30px #ffffbe;
 </div>
 
 <!-- модалка на рассчет калькулятора -->
-<div class="modal fade modal_calculate"  tabindex="-1" role="dialog" >
+<div class="modal fade modal_policy"  tabindex="-1" role="dialog" >
   <div class="modal-dialog modal-lg">
     <div class="modal-content big">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       <div class="row">
         <div class="col-sm-12">
-          <div class="h-block">
+          
             <div class="mod-titles">
-              Калькулятор предварительного расчета стоимости
+              Политика конфиденциальности
             </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="form mt-20">
-            <form class="form-horizontal float-left col-sm-12">
-              <div class="form-group">
-              <div  class="col-sm-6 label-block">Площадь потолка (кв.м.)</div>
-                <div class="col-sm-5">
-                  <div class="calc">
-                    <div class="minus">
-                      <div class="image">
-                        <img src="img/content/calculate/–.png" alt="">
-                      </div>
-                    </div>
-                    <div class="val-calculated">
-                      <input id="calc-input" type="text" placeholder="0" style="">
-                    </div>
-                    <div class="plus" >
-                      <div class="image">
-                        <img src="img/content/calculate/+.png" alt="">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-12 label-block">Категория потолка</div>
-                <div  class="col-sm-12 ">
-                  <div class="col-sm-4 form-input-img-block">
-                    <label><input type="radio" name="r2" value="option">эконом</label>
-                    <div class="image">
-                      <img src="img/content/calculate/econom.jpg" alt="">
-                    </div>
-                  </div>
-                  <div class="col-sm-4 form-input-img-block">
-                    <label><input type="radio" name="r2" value="option">стандарт</label>
-                    <div class="image">
-                      <img src="img/content/calculate/standart.png" alt="">
-                    </div>
-                  </div>
-                  <div class="col-sm-4 form-input-img-block">
-                    <label><input type="radio" name="r2" value="option">премиум</label>
-                    <div class="image">
-                      <img src="img/content/calculate/premium.png" alt="">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div  class="col-sm-12 label-block"> Время выполнения работ</div>
-                <div  class="col-sm-12 form-input-block">
-                  <label class="l-radio"><input type="radio" name="r1" value="option"> срочно</label>
-                  <label class="l-radio"><input type="radio" name="r1" value="option"> 1 неделя</label>
-                  <label class="l-radio"><input type="radio" name="r1" value="option"> 2 недели</label>
-                  <label class="l-radio"><input type="radio" name="r1" value="option"> не знаю</label>
-                </div>
-              </div>
-              <div class="form-group">
-                <div  class="col-sm-12 label-block "> Введите Ваши контактные данные</div>
-                <div  class="col-sm-12 info">
-                  <div class="col-sm-5 input-info">
-                      <label  class="control-label">Ф.И.О.:
-                        <input type="text" class="form-control"  placeholder="">
-                      </label>
-                  </div>
-                  <div class="col-sm-5 input-info">
-                      <label  class="control-label">Телефон:
-                        <input type="text" class="form-control phones" placeholder="+7 (000) 000-00-00">
-                      </label>
-
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-12" style="text-align: center">
-                  <button type="submit" class="more_btn mt-20">Сделайте расчет</button>
-                </div>
-              </div>
-            </form>
-          </div>
+             <div class="mod-text">
+            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+            </div>
         </div>
       </div>
     </div>
@@ -976,27 +906,27 @@ box-shadow:0 0 30px #ffffbe;
       <div class="row">
         <div class="col-md-7">
           <div class="big_img">
-            <img id="img-big" alt="" src="img/content/ready/1.jpg">
+            <img id="img-big" alt="" src="img/portfolio_item1.jpg">
           </div>
           <div class="small_img">
             <div class="col-md-3 col-sm-3 col-xs-6">
-                <img alt="" src="img/content/ready/2.jpg" >
+                <img alt="" src="img/portfolio_item1.jpg" >
             </div>
             <div class="col-md-3 col-sm-3 col-xs-6">
-                <img alt="" src="img/content/ready/3.jpg">
+                <img alt="" src="img/portfolio_item1.jpg">
             </div>
             <div class="col-md-3 col-sm-3 col-xs-6">
-                <img alt="" src="img/content/ready/4.png" >
+                <img alt="" src="img/portfolio_item1.jpg" >
             </div>
             
           </div>
         </div>
         <div class="col-md-5">
-          <div class="title">Монтаж потолка</div>
-          <div class="name">июнь 2016 года.</div>
+          <div class="title">Корпоративный сайт+ магазин</div>
+          <!-- <div class="name">июнь 2016 года.</div> -->
           <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</div>
-          <div class="way">Вам понравился этот проект?</div>
-          <div class="zak"><a class="more_btn" href="">Хочу заказать такой же</a></div>
+          <!-- <div class="way">Вам понравился этот проект?</div>
+          <div class="zak"><a class="more_btn" href="">Хочу заказать такой же</a></div> -->
         </div>
       </div>
     </div>
@@ -1021,23 +951,10 @@ box-shadow:0 0 30px #ffffbe;
     <script src="js/jQueryFormStyler-master/jquery.formstyler.min.js"></script>
     <script src="js/scrollspy.min.js"></script>
 	<script src="js/script.min.js" charset="utf-8"></script>
-    <!-- <script type="text/javascript">
-      function getFile(){
-        document.getElementById("upfile").click();
-      }
-      function sub(obj){
-        var file = obj.value;
-        var fileName = file.split("\\");
+  <script src="wow-animation/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
 
-        if (fileName[fileName.length-1]) {
-          fileName = fileName[fileName.length-1];
-        } else {
-          fileName = 'Обзор';
-        }
-
-        document.getElementById("upload_file").innerHTML = fileName;
-        event.preventDefault();
-      }
-    </script> -->
   </body>
 </html>
