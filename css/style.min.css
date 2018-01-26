@@ -5,7 +5,7 @@ text-decoration: none
 }
 
 a:hover {
-color: #fff;
+
 text-decoration: none
 }
 
@@ -35,12 +35,12 @@ padding: 14px 0px;
 
 }
 
-.navbar-brand {
+/*.navbar-brand {
 background: url(../img/logo1.png) no-repeat 0 0;
 height: 70px;
 width: 150px;
 margin-right: 20px
-}
+}*/
 
 .navbar-right {
 text-align: right
@@ -70,11 +70,12 @@ color: #fff
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li > a:hover {
 background-color: transparent;
-color: #36e0ce
+
 }
 
 .dropdown-menu {
-border: 1px solid #36e0ce
+border: none;
+
 }
 
 header a.dropdown-toggle {
@@ -97,20 +98,13 @@ color: #fff;
 margin: -4px 0px
 }
 
-.sity {
-margin-top: -10px
-}
 
-.sity i {
-color: #36e0ce;
-font-size: 24px
-}
-
+/*
 a.callback {
 font-size: 18px;
 font-weight: 600;
 border-bottom: 1px solid #36e0ce
-}
+}*/
 
 .caption {
 background-position: 0 0;
@@ -184,15 +178,15 @@ left: -40px;
 top: 6px
 }
 
-ul.vib li a.name:hover {
+/*ul.vib li a.name:hover {
 color: #36e0ce
 }
 
 ul.vib li.active a.name {
 color: #36e0ce
 }
-
-a.li_btn {
+/**/
+/*a.li_btn {
 opacity: 0;
 transition: all .3s ease-in-out;
 background: #36e0ce;
@@ -202,7 +196,7 @@ border-radius: 3px;
 margin-left: 30px;
 display: inline-block
 }
-
+*/
 ul.vib li.active a.li_btn {
 opacity: 1
 }
@@ -264,7 +258,7 @@ padding: 0px!important;
 .who .item.top .name {
 width: 100%;
 height: 57px;
-top: 80%;
+top: 82%;
 left: 0;
 z-index: 5;
 background-color: rgba(24, 69, 189, 0.6);
@@ -283,18 +277,27 @@ margin-top: 5px
 
 .who .item .name {
 width: 100%;
+
 top: 10px;
 left: 5px;
 z-index: 20;
 padding: 10px;
 position: absolute;
 color: #fff;
-background: #36e0ce;
+
 font-size: 20px;
 text-align: center;
 font-weight: bold;
 font-family: 'Roboto', sans-serif
 }
+
+img.album_image {
+	display: inline-block;
+	/*max-width: 400px;*/
+	margin:auto;
+}
+
+
 
 .who .item .image {
 position: relative;
@@ -757,17 +760,17 @@ color: #fff;
 transition: all .3s ease-in-out
 }
 
-.contact .soc .socs ul li a:hover i {
+/*.contact .soc .socs ul li a:hover i {
 color: #36e0ce
-}
+}*/
 
-.form .title {
+/*.form .title {
 font-size: 36px;
 font-weight: 600;
 color: #36e0ce;
 border-bottom: 2px solid #36e0ce;
 margin-bottom: 15px
-}
+}*/
 
 .form form label {
 font-size: 18px;
@@ -896,8 +899,7 @@ padding: 15px 0px
 }
 
 .big .way {
-text-align: center;
-color: #36e0ce;
+
 font-size: 30px;
 line-height: 32px;
 font-weight: bold;
@@ -1105,19 +1107,19 @@ top: 30%;
 left: 100%
 }
 
-.plus:hover {
+/*.plus:hover {
 cursor: pointer
-}
+}*/
 
-.minus {
+/*.minus {
 display: inline-block;
 vertical-align: middle;
 width: 30%;
 height: 100%;
 text-align: center
-}
+}*/
 
-.minus .image {
+/*.minus .image {
 position: relative;
 top: 30%;
 left: 100%
@@ -1185,7 +1187,7 @@ height: 220px
 width: 800px;
 display: block;
 margin: auto
-}
+}*/
 
 
 
@@ -1318,6 +1320,7 @@ border-radius: 20px;
 -moz-box-shadow:0 0 46px #ffffbe;
 -webkit-box-shadow:0 0 46px #ffffbe;
 box-shadow:0 0 46px #ffffbe;
+color:#000; 
 }
 
 
@@ -1412,6 +1415,7 @@ border-radius: 20px;
 -moz-box-shadow:0 0 46px #ffffbe;
 -webkit-box-shadow:0 0 46px #ffffbe;
 box-shadow:0 0 46px #ffffbe;
+color:#000; 
 }
 
 
@@ -1545,10 +1549,14 @@ background-size: cover;
 
 }
 
-.client_photo {
+img.client_photo {
 position: absolute;
-top: -30px;
-left: -30px;
+display: block;
+width: 80px;
+height: 80px;
+top: 10px;
+left: -20px;
+overflow: visible;
 }
 
 
@@ -1557,7 +1565,8 @@ left: -30px;
 
 .short_text,
 .review_sign {
-
+padding-top: 40px;
+padding-left: 30px;
 font-size: 14px;
 font-family: 'PT Sans Bold', arial;   
 color: rgb(252, 121, 0);
@@ -1587,79 +1596,6 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 
-.review_text {
-color: #000;
-display: block;
-max-width: 80%;
-text-align: justify;
-font-size: 16px;
-}
-
-
-
-
-.client_review {
-max-width: 560px;
-min-width: 460px;
-min-height: 347px;
-}
-
-
-
-.carousel-container {
-position:relative;
-width:100%;
-padding-top: 200px;
-}
-#carousel {
-height:520px;
-width:100%;
-
-position:relative;
-margin-bottom:0.5em;
-font-size:14px;
-
-}
-.carousel-image {
-border:0;
-display:block;
-}
-.carousel-feature {
-position:absolute;
-top:-1000px;
-left:-1000px;
-min-height: 247px;
-cursor:pointer;
-background-color: #fff;
-padding-top: 97px;
-padding-left: 61px;
-}
-.carousel-feature .carousel-caption {
-position:absolute;
-bottom:0;
-width:100%;
-background-color:#000;
-}
-.carousel-feature .carousel-caption p {
-margin:0;
-padding:5px;
-font-weight:bold;
-font-size:12px;
-color:white;
-}
-
-#carousel-left {
-position:absolute;
-top:50%;
-left:10px;
-cursor:pointer;
-}
-#carousel-right {
-position:absolute;
-top:50%;
-right:10px;
-cursor:pointer;
-}
 
 
 
@@ -1738,4 +1674,97 @@ margin-bottom: 27px;
 
 
 
+    .slider {
+        width: 90%;
+        margin: 100px auto;
+        height: 600px;
 
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+
+   
+.slick-prev:before {
+	
+	background-image: url(../img/arrow-left.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.slick-prev {
+	position: absolute;
+	top: 30%;
+	height: 50px;
+	width: 50px;
+	display: block;
+	
+}
+
+.slick-next {
+	position: absolute;
+	top: 30%;
+	height: 50px;
+	width: 50px;
+	display: block;
+	
+}
+
+.slick-next:before {
+	height: 50px;
+	width: 50px;
+	background-image: url(../img/arrow-right.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+      height: 200px;
+      opacity: 0;
+      height: 320px;     
+      padding-bottom: 20px;
+
+    }
+
+    .slick-slide > div.client_review>p {
+    	font-size: 10px;
+    }
+    
+    .slick-active {
+      opacity: .5;
+       height: 200px;   
+       
+
+    }
+
+    .slick-current {
+      opacity: 1;    
+      display: inline-block;
+      background-color: transparent;
+      height: 400px!important;
+      width: 400px;
+    }
+
+.slick-current > div.client_review>p {
+	font-size: 16px;
+}
+
+.review_text {
+color: #000;
+display: block;
+max-width: 95%;
+text-align: justify;
+font-size: 16px;
+padding-top: 10px;
+padding-left: 30px;
+}
+
+div.client_review {
+	background-color: #fff;
+	position: relative;
+}
