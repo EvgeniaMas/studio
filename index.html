@@ -10,7 +10,7 @@
 <link href="http://allfont.ru/allfont.css?fonts=pt-sans" rel="stylesheet" type="text/css" />
 <link href="http://allfont.ru/allfont.css?fonts=pt-sans-bold" rel="stylesheet" type="text/css" />
 <!-- Bootstrap -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -24,7 +24,7 @@
 <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
 <link rel="stylesheet" href="css/style.min.css">
 <link rel="stylesheet" href="css/adaptive.min.css">
-<link rel="stylesheet" type="text/css" href="wow-animation/animate.min.css">
+<link rel="stylesheet" type="text/css" href="css/animate.min.css">
 
 <style type="text/css">
 .wrapper {
@@ -38,11 +38,13 @@ background:url(img/main.jpg) no-repeat;
 background-size:cover;
 background-position:center center
 }
-#img_logo {
-display: block;
-width: 100px;
-text-align: left;
-margin-top: 13px;
+.navbar-brand {
+margin-top: 27px;
+background: url(img/logo.jpg) no-repeat 0 0;
+background-size: contain;
+height: 60px;
+width: 110px;
+margin-right: 218px;
 }
 .navbar.navbar-default {
 background-color: transparent!important;
@@ -56,8 +58,8 @@ color: rgb(255, 255, 255);
 line-height: 1.2;
 text-align: center;
 }
-ul.navbar-default .navbar-nav:nth-child(1){
-background-color: red;
+.navbar-default .navbar-nav > li > a.last { 
+padding-right: 12px!important;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
@@ -85,7 +87,7 @@ font-size: 18px;
 font-family: 'PT Sans Bold', arial;
 color: #fff;  
 line-height: 1.2;
-text-align: right;  
+float: left;  
 }
 .header__activity {
 font-size: 48px;
@@ -119,6 +121,8 @@ font-family: 'Roboto Bold', arial;
 color: rgb(255, 255, 255);  
 margin-right: 52px;
 position: relative;
+display: inline-block;
+margin-bottom: 20px;
 }
 img.mark_icon {
 display: inline-block;
@@ -158,10 +162,6 @@ color: #000;
 -webkit-box-shadow:0 0 30px #ffffbe;
 box-shadow:0 0 30px #ffffbe;
 }
-/*.navbar-collapse.collapse {
-  max-width: 560px!important;
-  
-}*/
 .navbar-toggle .collapsed:hover{
 background-color: #fff;
 }
@@ -174,6 +174,105 @@ border: 1px solid #fff;
 padding: 5px 15px;
 margin-top: 24px;
 }
+header a.dropdown-toggle {
+color: #fff;
+font-family: 'PT Sans', arial;
+font-size: 14px;
+text-align: center;
+  -moz-transform: matrix( 0.82758620689655,0,0,0.83333333333333,0,0);
+  -webkit-transform: matrix( 0.82758620689655,0,0,0.83333333333333,0,0);
+  -ms-transform: matrix( 0.82758620689655,0,0,0.83333333333333,0,0);
+text-decoration: none
+}
+header a.dropdown-toggle:hover {
+text-decoration: none
+}
+div.navbar-right {
+  min-width: 400px;
+  background-color: red;
+}
+
+@media (max-width: 1200px) {
+.navbar-default .navbar-nav > li > a { 
+padding-right: 20px!important;
+}
+.navbar-brand {
+   margin-right: 30px;
+}
+}
+
+
+@media (max-width: 1024px) {
+
+.header__subactivity {
+font-size: 30px;
+}  
+.header__activity {
+font-size: 36px;
+}  
+.header__order,
+a.header__projects {
+width: 300px;
+height: 65px;
+font-size: 24px;
+}
+
+.header__activity {
+font-size: 28px;
+}  
+.header__activity {
+font-size: 30px;
+}
+}
+
+@media (max-width: 768px) {
+#header {
+
+min-height:600px;
+
+}
+.header__subactivity {
+font-size: 22px;
+} 
+.header__order,
+a.header__projects {
+ 
+width: 250px;
+height: 55px;
+font-size: 18px;
+display: block;
+margin:auto;
+margin-bottom: 20px;
+}
+
+.navbar-brand {
+height: 40px;
+width: 80px;
+position: absolute;
+top: 0px;
+left: 0px; 
+margin-right: 18px;
+} 
+.header__activity {
+font-size: 25px;
+}
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a.last {
+padding-right: 0px!important;
+text-align: center;
+}
+}
+
+@media (max-width: 400px) {
+.header__subactivity {
+font-size: 20px;
+text-align: center;
+}
+.header__activity {
+text-align: center;
+}  
+}
+
 
 </style>     
 </head>
@@ -181,44 +280,54 @@ margin-top: 24px;
 <div class="wrapper"> 
 <header id ="header">
 <div class="container">
-  <nav class="navbar navbar-default">
-    <!-- <div class="container-fluid"> -->     
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-          <span class="sr-only">Меню</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-         <!--  <span >Меню </span> -->
-        </button>      
-      </div> 
-      <div class="col-md-12">
-          <div class="col-md-2">
-          <img id="img_logo" src="img/logo.jpg" alt="Логотип">
-          </div>        
-          <div class="col-md-7">          
-           <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-left">
-              <li><a href="#service">Наши услуги</a></li>
-              <li><a  href="#projects">Наши работы</a></li>
-              <li><a href="#contacts">Контакты</a></li>              
-            </ul>
-         </div>     
-      </div>
-       <div class="col-md-3">       
-          <span class="header__phone">+7(915)-081-58-25</span>
-         
-          <div class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="langChoice">RUS</span><span ><img class="mark_icon" src="img/mark2.png" alt="Галочка"></span> </a>
-            <ul id="lang" class="dropdown-menu">
-              <li><a >RUS</a></li>
-              <li><a >ENG</a></li>             
-              
+  <div class="row">
+   <div  class="col-md-12">
+    <div class="col-md-9">
+
+    <nav class="navbar navbar-default navbar-static-top">
+      
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse scroll-nav" id="bs-example-navbar-collapse-1" >
+          <ul class="nav navbar-nav">
+            <li><a href="#service">Наши услуги</a></li>
+            <li><a href="#projects">Примеры работ</a></li>
+            <li><a class="last" href="#contacts">Контакты</a></li>
+            
+          </ul>
+          
+        </div><!-- /.navbar-collapse -->
+      
+      </nav>
+    </div>
+
+    <div class="col-md-3">
+      <!-- <div class="navbar-right"> -->
+            <div id="v_phone" class="phone">
+              <span class="header__phone">+7(915)-081-58-25</span>
+            </div>
+            <div class="dropdown sity">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="v_sity">RUS</span> <span ><img class="mark_icon" src="img/mark2.png" alt="Галочка"></span></a>
+              <ul id="sity" class="dropdown-menu">
+                <li><a data-sity="RUS">RUS</a></li>
+                <li><a data-sity="ENG" >ENG</a></li>             
               </ul>
-          </div>
-       </div>       
-    </div><!--/.container-12 -->   
-  </nav>
+            </div>         
+           <!--  </div> -->
+    </div>
+  </div>
+  </div>
+  
     <h1 class="header__activity">Разработка сайтов <br>
     и мобильных приложений</h1>
     <h2 class="header__subactivity">Для Вашего бизнеса!</h2>
@@ -281,40 +390,40 @@ margin-top: 24px;
       </div>     
 </div>
 
-<div id="projects" class="who portfolio">
+<div id="projects" class="who portfolio section_paddings ">
   <div class="container">
     <h2 class="portfolio_section">Наши работы</h2>
     <div class="row">
       <div class="col-md-12 col-sm-12">
         <div class="item top">
-          <div class="col-md-4 col-sm-4 pad">            
+          <div class="col-md-4 col-sm-4 pad" data-target=".modal_obj1" data-toggle="modal">            
             <div class="image">
               <div class="name">Интернет-магазин по продажам <br>Торгового оборудования</div>
               <img class="album_image" src="img/portfolio_item1.jpg" alt="Наши работы">
               <div class="hov">
-                <a data-target=".modal_obj" data-toggle="modal" class="h-btn">Интернет-магазин по продажам <br>Торгового оборудования</a>
+                <a  class="h-btn">Интернет-магазин по продажам <br>Торгового оборудования</a>
               </div>
             </div>
           </div>
         </div>
         <div class="item top">
-          <div class="col-md-4 col-sm-4 pad">           
+          <div class="col-md-4 col-sm-4 pad" data-target=".modal_obj2" data-toggle="modal">           
             <div class="image">
                <div class="name">Лендинг по продажам <br> автомоек</div>
              <img class="album_image" src="img/portfolio_item1.jpg" alt="Наши работы">
               <div class="hov">
-                <a data-target=".modal_obj" data-toggle="modal" class="h-btn">Лендинг по продажам <br> автомоек</a>
+                <a  class="h-btn">Лендинг по продажам <br> автомоек</a>
               </div>
             </div>
           </div>
         </div>
         <div class="item top">
-          <div class="col-md-4 col-sm-4 pad">          
+          <div class="col-md-4 col-sm-4 pad" data-target=".modal_obj3" data-toggle="modal">          
             <div class="image">
                 <div class="name">Интернет-магазин по <br> продажам Поликарбоната</div>
               <img class="album_image" src="img/portfolio_item1.jpg" alt="Наши работы">
               <div class="hov">
-                <a data-target=".modal_obj" data-toggle="modal" class="h-btn">Интернет-магазин по <br> продажам Поликарбоната</a>
+                <a  class="h-btn">Интернет-магазин по <br> продажам Поликарбоната</a>
               </div>
             </div>
           </div>
@@ -322,34 +431,34 @@ margin-top: 24px;
         <div class="row">     
       <div class="col-md-12 col-sm-12">
         <div class="item top">
-          <div class="col-md-4 col-sm-4 pad">           
+          <div class="col-md-4 col-sm-4 pad" data-target=".modal_obj4" data-toggle="modal">           
             <div class="image">
-               <div class="name">Корпоративный сайт <br>+ магазин</div>
+               <div class="name">Корпоративный сайт <br> + магазин</div>
              <img class="album_image" src="img/portfolio_item1.jpg" alt="Наши работы">
               <div class="hov">
-                <a data-target=".modal_obj" data-toggle="modal" class="h-btn">Корпоративный сайт <br>+ магазин</a>
+                <a  class="h-btn">Корпоративный сайт <br> + магазин</a>
               </div>
             </div>
           </div>
         </div>
         <div class="item top">
-          <div class="col-md-4 col-sm-4 pad">           
+          <div class="col-md-4 col-sm-4 pad" data-target=".modal_obj5" data-toggle="modal">           
             <div class="image">
                <div class="name">Мобильное приложение</div>
               <img class="album_image" src="img/portfolio_item1.jpg" alt="Наши работы">
               <div class="hov">
-                <a data-target=".modal_obj" data-toggle="modal" class="h-btn">Мобильное приложение</a>
+                <a  class="h-btn">Мобильное приложение</a>
               </div>
             </div>
           </div>
         </div>
         <div class="item top">
-          <div class="col-md-4 col-sm-4 pad">           
+          <div class="col-md-4 col-sm-4 pad" data-target=".modal_obj6" data-toggle="modal">           
             <div class="image">
                <div class="name">Система автоматизации <br> производством</div>
               <img class="album_image" src="img/portfolio_item1.jpg" alt="Наши работы">
               <div class="hov">
-                <a data-target=".modal_obj" data-toggle="modal" class="h-btn">Система автоматизации <br> производством</a>
+                <a  class="h-btn">Система автоматизации <br> производством</a>
               </div>
             </div>
           </div>
@@ -361,7 +470,7 @@ margin-top: 24px;
    </div>
 </div>
 
-<div id="questions" class="container-fluid question">    
+<div id="questions" class="container-fluid section_paddings">    
   <div class="container ">
        <p class="form_client">Оставьте заявку </p>    
        <p class="form_clientReply">и мы свяжемся с Вами в течение часа</p>     
@@ -378,7 +487,7 @@ margin-top: 24px;
 </div>
 
 
-  <div class="container-fluid" id="steps">
+  <div class="container-fluid section_paddings" id="steps">
     <div class="container">
       <h2 class="schema">Схема нашей работы</h2>
        <h3 class="schema__sub">Можно несколько слов о том, что для Вас трудится целая <br> команда профессионалов</h3>
@@ -387,32 +496,36 @@ margin-top: 24px;
        
          <div class="col-md-2">
           <p class="steps__title">Шаг 1</p>
+          <p class="steps__text">Несколько слов  о шаге</p>
          </div>
 
          <div class="col-md-2">
           <p class="steps__title">Шаг 2</p>
+          <p class="steps__text">Несколько слов  о шаге</p>
          </div>
 
          <div class="col-md-2">
           <p class="steps__title">Шаг 3</p>
+          <p class="steps__text">Несколько слов  о шаге</p>
          </div>
 
          <div class="col-md-2">
           <p class="steps__title">Шаг 4</p>
+          <p class="steps__text">Несколько слов  о шаге</p>
          </div>
 
          <div class="col-md-2">
           <p class="steps__title">Шаг 5</p>
+          <p class="steps__text">Несколько слов  о шаге</p>
          </div>
 
          <div class="col-md-2">
           <p class="steps__title">Шаг 6</p>
+          <p class="steps__text">Несколько слов  о шаге</p>
          </div>
-    </div><!-- 12md--> 
-   </div><!-- row-->
-
-   <div class="col-md-12 steps_schema">
-    <div class="white_block"></div>
+   
+   <!--  <div class="col-md-12 steps_schema"> -->
+    <div class="white_block">
           <div class="row ">
        <div class="col-md-12 ">
        
@@ -439,41 +552,17 @@ margin-top: 24px;
          <div class="col-md-2">
           <p class="steps__round2">&#10004;</p>
          </div>
+         </div>
+          <!-- </div> --><!-- 12md--> 
     </div><!-- 12md--> 
    </div><!-- row-->
-    <div class="row">
-       <div class="col-md-12">
-       
-         <div class="col-md-2">
-          <p class="steps__text">Несколько слов  о шаге</p>
-         </div>
-
-         <div class="col-md-2">
-          <p class="steps__text">Несколько слов  о шаге</p>
-         </div>
-
-         <div class="col-md-2">
-          <p class="steps__text">Несколько слов  о шаге</p>
-         </div>
-
-         <div class="col-md-2">
-          <p class="steps__text">Несколько слов  о шаге</p>
-         </div>
-
-         <div class="col-md-2">
-          <p class="steps__text">Несколько слов  о шаге</p>
-         </div>
-
-         <div class="col-md-2">
-          <p class="steps__text">Несколько слов  о шаге</p>
-         </div>
-       </div>
-    </div><!-- 12md--> 
-   </div><!-- row-->   
-  </div><!-- container--> 
+   </div><!-- row-->  
+   </div><!-- container--> 
 </div><!-- container-fluid--> 
 
-<div id="review" class="container-fluid">
+</div>
+
+<div id="review" class="section_paddings container-fluid">
 <h2 class="portfolio_section">Отзывы клиентов</h2>
 <div  class="responsive slider">
    <div class="client_review">
@@ -558,7 +647,7 @@ margin-top: 24px;
   </div>
 </div>
 
-<section class="container-fluid" id="order">    
+<section class="container-fluid section_paddings " id="order">    
 <div class="container ">
   <div class="col-md-12">
     <div class="col-md-6">
@@ -607,23 +696,23 @@ margin-top: 24px;
             </div>
             <div class="col-md-4">
               <p id="contacts" class="footer__sections">Контакты</p>
-              <div class="col-md-2">
+              <div class="col-md-2 col-xs-2">
                  <span><img class="footer_icon" src="img/footer_icon1.png"></span>
                </div>
-               <div class="col-md-10">
-                 <span class="footer__contsctsText">г. Москва,<br> Пресненская набережная, 12,офис 28/16</span>
+               <div class="col-md-10 col-xs-10">
+                 <span class="footer__contactsText">г. Москва,<br> Пресненская набережная, 12,офис 28/16</span>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 col-xs-2">
                  <span><img class="footer_icon" src="img/footer_icon2.png"></span>
                </div>
-               <div class="col-md-10">
-                 <span class="footer__contsctsText">+7(915)-081-58-25</span>
+               <div class="col-md-10 col-xs-10">
+                 <span class="footer__contactsText">+7(915)-081-58-25</span>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 col-xs-2">
                  <span><img class="footer_icon" src="img/footer_icon3.png"></span>
                </div>
-               <div class="col-md-10">
-                 <span class="footer__contsctsText">velesgroupp@gmail.com</span>
+               <div class="col-md-10 col-xs-10">
+                 <span class="footer__contactsText">velesgroupp@gmail.com</span>
                 </div>
             </div>
           
@@ -631,7 +720,8 @@ margin-top: 24px;
       </div>
     </div>
 </footer>
-
+<div class="container-fluid footer_bottom">
+</div>
 
 <!-- callback -->
 <div class="modal fade modal_callback" tabindex="-1" role="dialog">
@@ -702,7 +792,7 @@ margin-top: 24px;
   </div>
 </div>
 
-<!-- модалка на рассчет калькулятора -->
+<!-- модалка на политику конфиденциальности-->
 <div class="modal fade modal_policy"  tabindex="-1" role="dialog" >
   <div class="modal-dialog">
     <div class="modal-content">
@@ -714,9 +804,9 @@ margin-top: 24px;
               Политика конфиденциальности
             </div>
              <div class="mod-text">
-            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
-            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
-            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+            <p class="policy_text">По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+            <p class="policy_text">По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+            <p class="policy_text">По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
             </div>
         </div>
       </div>
@@ -725,34 +815,148 @@ margin-top: 24px;
 </div>
 
 <!-- модалка объекты -->
-<div class="modal fade modal_obj" tabindex="-1" role="dialog" >
+<div class="modal fade modal_obj2" tabindex="-1" role="dialog" >
   <div class="modal-dialog modal-lg">
     <div class="modal-content big">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       <div class="row">
         <div class="col-md-7">
           <div class="big_img">
-            <img id="img-big" alt="" src="img/portfolio_item1.jpg">
+            <img id="img-big" alt="Пример работы" src="img/portfolio/example.jpg">
           </div>
-          <div class="small_img">
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <img alt="" src="img/portfolio_item1.jpg" >
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <img alt="" src="img/portfolio_item1.jpg">
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <img alt="" src="img/portfolio_item1.jpg" >
-            </div>
-            
-          </div>
+          
         </div>
         <div class="col-md-5">
-          <div class="title">Корпоративный сайт+ магазин</div>
+          <div class="title">Лендинг по продажам автомоек</div>
+         
+          <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</div>
+          <a target="_blank" class="projects__link" href="https://yandex.ru">https://yandex.ru</a>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade modal_obj1" tabindex="-1" role="dialog" >
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content big">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="row">
+        <div class="col-md-7">
+          <div class="big_img">
+            <img id="img-big" alt="Пример работы" src="img/portfolio/portfolio_item1.jpg">
+          </div>
+          
+        </div>
+        <div class="col-md-5">
+          <div class="title">Интернет магазин по продажам торгового оборудования</div>
+         
+          <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</div>
+          <a target="_blank" class="projects__link" href="https://yandex.ru">https://yandex.ru</a>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade modal_obj3" tabindex="-1" role="dialog" >
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content big">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="row">
+        <div class="col-md-7">
+          <div class="big_img">
+            <img id="img-big" alt="Пример работы" src="img/portfolio/example2.jpg">
+          </div>
+          
+        </div>
+        <div class="col-md-5">
+          <div class="title">Интернет-магазин по продажам Поликарбоната</div>
           <!-- <div class="name">июнь 2016 года.</div> -->
           <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</div>
-          <!-- <div class="way">Вам понравился этот проект?</div>
-          <div class="zak"><a class="more_btn" href="">Хочу заказать такой же</a></div> -->
+          <a target="_blank" class="projects__link" href="https://yandex.ru">https://yandex.ru</a>
+          <!-- <div class="way">Вам понравился этот проект?</div>-->
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade modal_obj4" tabindex="-1" role="dialog" >
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content big">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="row">
+        <div class="col-md-7">
+          <div class="big_img">
+            <img id="img-big" alt="Пример работы" src="img/portfolio/example3.jpg">
+          </div>
+          
+        </div>
+        <div class="col-md-5">
+          <div class="title">Корпоративный сайт + магазин</div>
+          <!-- <div class="name">июнь 2016 года.</div> -->
+          <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</div>
+          <a target="_blank" class="projects__link" href="https://yandex.ru">https://yandex.ru</a>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade modal_obj5" tabindex="-1" role="dialog" >
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content big">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="row">
+        <div class="col-md-7">
+          <div class="big_img">
+            <img id="img-big" alt="Пример работы" src="img/portfolio/portfolio_item1.jpg">
+          </div>
+          
+        </div>
+        <div class="col-md-5">
+          <div class="title">Мобильное приложение</div>
+          <!-- <div class="name">июнь 2016 года.</div> -->
+          <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</div>
+          <a target="_blank" class="projects__link" href="https://yandex.ru">https://yandex.ru</a>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade modal_obj6" tabindex="-1" role="dialog" >
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content big">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="row">
+        <div class="col-md-7">
+          <div class="big_img">
+            <img id="img-big" alt="Пример работы" src="img/portfolio/portfolio_item1.jpg">
+          </div>
+          
+        </div>
+        <div class="col-md-5">
+          <div class="title">Система автоматизации производством</div>
+          
+          <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</div>
+          <a target="_blank" class="projects__link" href="https://yandex.ru">https://yandex.ru</a>
+          
+          
         </div>
       </div>
     </div>
@@ -809,7 +1013,7 @@ $(".slider").slick({
 
 
 </script>
-  <script src="wow-animation/wow.min.js"></script>
+  <script src="js/wow.min.js"></script>
 <script>
     new WOW().init();
 </script>
