@@ -862,7 +862,12 @@ button.close {
 position: absolute;
 right: 10px;
 top: 10px;
-z-index: 9999
+width: 15px;
+height: 15px;
+background-image: url(../img/close.png);
+background-size: contain;
+background-repeat: no-repeat;
+z-index: 9999;
 }
 
 .big .title {
@@ -1888,4 +1893,37 @@ padding-left: 30px;
 
 .section_paddings  {
 	padding-top: 112px;
+}
+
+div#sent_message {
+	width: 361px;
+}
+#modal_contents {
+	height: 407px;
+}
+img.sent_icon{
+	display: block;
+	margin:auto;
+	margin-top: 89px;
+	max-width: 100px;
+}
+
+.recieved {
+  font-size: 18px;
+  font-family: 'Roboto Bold', arial;
+  color: #000; 
+  text-align: center;
+ 
+}
+p.desks_text {
+  display: block;
+  font-size: 18px;
+  font-family: 'Roboto Regular', arial;
+  color: #000;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  padding-bottom: 82px;
+
+
 }
