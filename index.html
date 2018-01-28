@@ -143,6 +143,7 @@ color: #fff;
 border: 4.96px solid #fff;   
 padding: 15px;
 display: inline-block;
+text-decoration: none!important;
 }
 
 a.header__projects:hover { 
@@ -228,7 +229,7 @@ min-height:600px;
 .header__subactivity {
 font-size: 22px;
 } 
-.header__order,
+/*.header__order,
 a.header__projects {
  
 width: 250px;
@@ -237,7 +238,7 @@ font-size: 18px;
 display: block;
 margin:auto;
 margin-bottom: 20px;
-}
+}*/
 
 .navbar-brand {
 height: 40px;
@@ -263,13 +264,22 @@ text-align: center;
 }
 .header__activity {
 text-align: center;
-}  
+} 
+.header__order,
+a.header__projects {
+ 
+width: 250px;
+height: 55px;
+font-size: 18px;
+display: block;
+margin:auto;
+margin-bottom: 20px;
+}
+
 }
 </style> 
 <link rel="stylesheet" type="text/css" href="css/slick.css">
-<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
 <link rel="stylesheet" href="css/style.min.css">
-<link rel="stylesheet" href="css/adaptive.min.css">
 <link rel="stylesheet" type="text/css" href="css/animate.min.css">
 <link href="http://allfont.ru/allfont.css?fonts=roboto-regular" rel="stylesheet" type="text/css" />
 <link href="http://allfont.ru/allfont.css?fonts=roboto-bold" rel="stylesheet" type="text/css" />
@@ -470,9 +480,9 @@ text-align: center;
        <p class="form_clientReply">и мы свяжемся с Вами в течение часа</p>     
       <div class="clearfix"> </div>      
       <div class="col-md-12">
-           <form class="make_order">
-              <input placeholder="Имя" name="name" class="form_inputs" type="text" required="required"/>
-              <input placeholder="Телефон" name="phone" class="form_inputs" type="text" required="required" />
+           <form class="make_order" action="call.php" method="POST">
+              <input placeholder="Имя" name="user_name" class="form_inputs" type="text" required="required"/>
+              <input placeholder="Телефон" name="user_phone" class="form_inputs" type="text" required="required" />
               <input class="form__backcall" type="submit" name="formFooter" value="Оставить заявку" />
               <div class="clearfix"></div>    
       </form> 
@@ -589,14 +599,43 @@ text-align: center;
                    
     </div>
     </div>
+     <div>
+      <img class="client_photo" alt="Клиент" src="img/client.jpg">
+      <div class="client_review">
+      <p class="short_text">Огромная благодарность за услугу!</p>
+      <p class="review_text">По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+      <p class="review_sign">Пантелеймон Пантелемонович <br>
+              компания Такая-то managment group</p>
+                   
+    </div>
+    </div>
+     <div>
+      <img class="client_photo" alt="Клиент" src="img/client.jpg">
+      <div class="client_review">
+      <p class="short_text">Огромная благодарность за услугу!</p>
+      <p class="review_text">По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+      <p class="review_sign">Пантелеймон Пантелемонович <br>
+              компания Такая-то managment group</p>
+                   
+    </div>
+    </div>
+     <div>
+      <img class="client_photo" alt="Клиент" src="img/client.jpg">
+      <div class="client_review">
+      <p class="short_text">Огромная благодарность за услугу!</p>
+      <p class="review_text">По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+      <p class="review_sign">Пантелеймон Пантелемонович <br>
+              компания Такая-то managment group</p>
+                   
+    </div>
+    </div>
     <div>
        <img class="client_photo " alt="Клиент" src="img/client.jpg">   
       <div class="client_review">
       <p class="short_text">Огромная благодарность за услугу!</p>
       <p class="review_text">По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
       <p class="review_sign">Пантелеймон Пантелемонович <br>
-              компания Такая-то managment group</p>
-               
+              компания Такая-то managment group</p>               
     </div>
     </div>       
   </div>
@@ -611,9 +650,9 @@ text-align: center;
       <div class="col-md-6"> 
       <p class="form_insert_upper">Введите </p>  
       <p class="form_insert">свое имя <br> и номер телефона: </p>    
-           <form class="make_order">
-              <input placeholder="Имя" name="name" class="form_inputs2" type="text" required="required"/>
-              <input placeholder="Телефон" name="phone" class="form_inputs2" type="text" required="required" />
+           <form class="make_order" action="call.php" method="POST">
+              <input placeholder="Имя" name="user_name" class="form_inputs2" type="text" required="required"/>
+              <input placeholder="Телефон" name="user_phone" class="form_inputs2" type="text" required="required" />
               <input class="form__backcall2" type="submit" name="formFooter" value="Оставить заявку" />
               <div class="clearfix"></div>    
       </form>       
@@ -683,25 +722,12 @@ text-align: center;
           Заказ обратного звонка
         </div>
         <div class="form mt-20">
-          <form class="form-horizontal">
-            <div class="form-group">
-              
-              <div class="col-sm-6">
-                <input type="text" class="form-control"  placeholder="Имя">
-              </div>
-            </div>
-            <div class="form-group">
-              
-              <div class="col-sm-6">
-                <input type="text" class="form-control phones" placeholder="Телефон">
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="col-sm-9 col-sm-offset-1">
-                <button type="submit" class="form__backcall2">Заказать</button>
-              </div>
-            </div>
-          </form>
+          <form class="make_order" action="call.php" method="POST">
+              <input placeholder="Имя" name="user_name" class="form_inputs form_modal" type="text" required="required"/>
+              <input placeholder="Телефон" name="user_phone" class="form_inputs form_modal" type="text" required="required" />
+              <input class="form__backcall form__backcallmodal" type="submit" name="formFooter" value="Заказать" />
+              <div class="clearfix"></div>    
+      </form> 
         </div>
       </div>
     </div>
@@ -709,7 +735,7 @@ text-align: center;
 </div>
 
 <!-- модалка ответ "Ваша заявка отправлена"-->
-<div  class="modal fade modal_answer" tabindex="-1" role="dialog">
+<div id="deliver_message" class="modal fade modal_answer" tabindex="-1" role="dialog">
   <div id="sent_message" class="modal-dialog" role="document">
     <div id="modal_contents" class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
@@ -879,14 +905,14 @@ text-align: center;
 </div>
 <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="js/scrollspy.min.js" async></script>
-<script src="js/script.min.js" async></script>
+<script src="js/scrollspy.min.js"></script>
+<script src="js/script.min.js"></script>
 <script src="js/slick.js"></script>
 <script>
 $('.center').slick({
   dots: false,
   infinite: true,
-  speed: 300,
+  speed: 1000,
   slidesToShow: 3,
   slidesToScroll: 1,
   autoplay: true,
@@ -895,27 +921,24 @@ $('.center').slick({
   focusOnSelect: true,
   responsive: [
     {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
       breakpoint: 992,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        adaptiveHeight: true
       }
     }
    ]
 });
 </script>
-<script src="js/wow.min.js" async></script>
+<script src="js/wow.min.js"></script>
 <script>
     new WOW().init();
+</script>
+<script>
+$('.make_order').on('submit', function(event) { 
+$('#deliver_message').modal('show');                                    
+});
 </script>
 
   </body>
