@@ -4,16 +4,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="x-rim-auto-match" content="none">
+<meta name="description" content="Заказать сайт, мобильное приложение в Москве" />
+<meta name="keywords" content="сайты, веб-разработка, мобильное приложение, разработка приложений, дизайн сайта, редизайн" />
 <title>Веб-студия</title>
-<link href="http://allfont.ru/allfont.css?fonts=roboto-regular" rel="stylesheet" type="text/css" />
-<link href="http://allfont.ru/allfont.css?fonts=roboto-bold" rel="stylesheet" type="text/css" />
-<link href="http://allfont.ru/allfont.css?fonts=pt-sans" rel="stylesheet" type="text/css" />
-<link href="http://allfont.ru/allfont.css?fonts=pt-sans-bold" rel="stylesheet" type="text/css" />
 <!-- Bootstrap -->
 <link rel="stylesheet" href="css/bootstrap.css">
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'> -->
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -27,10 +24,21 @@ height: 100%;
 }
 #header {
 position:relative;
-min-height:846px;
+height: 100vh;
+min-height:446px;
+
+padding:0!important;
 background:url(img/main.jpg) no-repeat;
 background-size:cover;
-background-position:center center
+background-position:center center;
+}
+#header__navigation {
+position: fixed;
+right: 0;
+left: 0;
+top: 0;
+padding-bottom: 10px;
+z-index: 1000;
 }
 .navbar-brand {
 margin-top: 27px;
@@ -48,7 +56,7 @@ border: none;
 padding-right: 82px!important;
 font-size: 18px!important;
 font-family: 'PT Sans Bold', arial;
-color: rgb(255, 255, 255);  
+color: #fff;  
 line-height: 1.2;
 text-align: center;
 }
@@ -56,30 +64,23 @@ text-align: center;
 padding-right: 12px!important;
 }
 .navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
+.navbar-default .navbar-nav > li > a:focus
+ {
 color:#fc7900!important; 
 }
-.header__langChoice {
-background-color: transparent;
-color: #fff;
-border: 1px solid #fff;
-display: inline-block;
-border-radius: 30px;
-padding: 8px;
-float: right;    
-border: 1.49px solid #fff; 
+
+.phone_container {
+padding-right:0;
+padding-left: 0;
 }
-.header__option {
-color: #000;
-text-align: center;
-}
+
+
 .header__phone {
 color: #fff;
 display: inline-block;    
 margin-top: 27px;
 font-size: 18px;
 font-family: 'PT Sans Bold', arial;
-color: #fff;  
 line-height: 1.2;
 float: left;  
 }
@@ -112,17 +113,18 @@ border: 1px solid #fc7900;
 text-transform: uppercase;
 font-size: 24px;
 font-family: 'Roboto Bold', arial;
-color: rgb(255, 255, 255);  
+color: #fff;  
 margin-right: 52px;
 position: relative;
 display: inline-block;
 margin-bottom: 20px;
 }
-img.mark_icon {
+.mark_icon {
 display: inline-block;
 margin-left: 5px;
+color: #fff;
+font-size: 8px;
 }
-
 .header__order:hover {
 border-radius: 20px; 
 -moz-box-shadow:0 0 46px #ffffbe;
@@ -145,7 +147,6 @@ padding: 15px;
 display: inline-block;
 text-decoration: none!important;
 }
-
 a.header__projects:hover { 
 border-width: 4.96px;
 border-color: rgb(252, 121, 0);
@@ -174,9 +175,9 @@ color: #fff;
 font-family: 'PT Sans', arial;
 font-size: 14px;
 text-align: center;
-  -moz-transform: matrix( 0.82758620689655,0,0,0.83333333333333,0,0);
-  -webkit-transform: matrix( 0.82758620689655,0,0,0.83333333333333,0,0);
-  -ms-transform: matrix( 0.82758620689655,0,0,0.83333333333333,0,0);
+-moz-transform: matrix( 0.82758620689655,0,0,0.83333333333333,0,0);
+-webkit-transform: matrix( 0.82758620689655,0,0,0.83333333333333,0,0);
+-ms-transform: matrix( 0.82758620689655,0,0,0.83333333333333,0,0);
 text-decoration: none
 }
 header a.dropdown-toggle:hover {
@@ -186,8 +187,8 @@ div.navbar-right {
   min-width: 400px;
   background-color: red;
 }
-
 @media (max-width: 1200px) {
+
 .navbar-default .navbar-nav > li > a { 
 padding-right: 20px!important;
 }
@@ -195,23 +196,13 @@ padding-right: 20px!important;
    margin-right: 30px;
 }
 }
-
-
 @media (max-width: 1024px) {
-
 .header__subactivity {
 font-size: 30px;
 }  
 .header__activity {
 font-size: 36px;
 }  
-/*.header__order,
-a.header__projects {
-width: 300px;
-height: 65px;
-font-size: 20px;
-}*/
-
 .header__activity {
 font-size: 28px;
 }  
@@ -219,19 +210,42 @@ font-size: 28px;
 font-size: 30px;
 }
 }
-
 @media (max-width: 768px) {
 #header {
-
-min-height:650px;
-
+min-height:300px;
 }
+
+.navbar-brand {
+margin-top: 15px;
+}
+
+.navbar-toggle {
+  margin-top: 15px!important;
+ }
+
+.header__phone {
+    margin-top: 15px;
+    font-size: 17px;    
+}
+
+div.dropdown {
+    padding: 5px 10px;
+    margin-top: 15px;
+}
+header a.dropdown-toggle {
+font-size: 17px;
+}
+
+ul#v_sity a{
+font-size: 17px;	
+}
+
+
 .header__subactivity {
 font-size: 22px;
 } 
 .header__order,
 a.header__projects {
- 
 width: 300px;
 height: 55px;
 font-size: 18px;
@@ -239,7 +253,6 @@ display: block;
 margin:auto;
 margin-bottom: 20px;
 }
-
 .navbar-brand {
 height: 40px;
 width: 80px;
@@ -266,8 +279,7 @@ text-align: center;
 text-align: center;
 } 
 .header__order,
-a.header__projects {
- 
+a.header__projects { 
 width: 250px;
 height: 50px;
 font-size: 16px;
@@ -275,8 +287,6 @@ display: block;
 margin:auto;
 margin-bottom: 20px;
 }
-
-
 }
 </style> 
 <link rel="stylesheet" type="text/css" href="css/slick.css">
@@ -285,16 +295,16 @@ margin-bottom: 20px;
 <link href="http://allfont.ru/allfont.css?fonts=roboto-regular" rel="stylesheet" type="text/css" />
 <link href="http://allfont.ru/allfont.css?fonts=roboto-bold" rel="stylesheet" type="text/css" />
 <link href="http://allfont.ru/allfont.css?fonts=pt-sans" rel="stylesheet" type="text/css" />
-<link href="http://allfont.ru/allfont.css?fonts=pt-sans-bold" rel="stylesheet" type="text/css" />
-    
+<link href="http://allfont.ru/allfont.css?fonts=pt-sans-bold" rel="stylesheet" type="text/css" />    
 </head>
 <body>
 <div class="wrapper"> 
-<header id ="header">
+<header class="container-fluid" id ="header">
+<!-- <div class="line"></div> -->
 <div class="container">
   <div class="row">
-   <div  class="col-md-12">
-    <div class="col-md-9">
+   <div  class="col-md-12" id="header__navigation">
+    <div class="col-md-9 col-sm-8">
     <nav class="navbar navbar-default navbar-static-top">      
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -316,23 +326,21 @@ margin-bottom: 20px;
         </div><!-- /.navbar-collapse -->      
       </nav>
     </div>
-
-    <div class="col-md-3">    
-            <div id="v_phone" class="phone">
+    <div class="col-md-3 col-sm-4 phone_container">     
+           <!--  <div id="v_phone" class="phone"> -->
               <span class="header__phone">+7(915)-081-58-25</span>
-            </div>
+           <!--  </div> -->
+
             <div class="dropdown sity">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="v_sity">RUS</span> <span ><img class="mark_icon" src="img/mark2.png" alt="Галочка"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="v_sity">RUS</span> <span class="mark_icon">&#9660;</span></a>
               <ul id="sity" class="dropdown-menu">
                 <li><a data-sity="RUS">RUS</a></li>
                 <li><a data-sity="ENG" >ENG</a></li>             
               </ul>
-            </div>         
-          
-    </div>
+            </div>        
+          </div>
+       </div>
   </div>
-  </div>
-  
     <h1 class="header__activity">Разработка сайтов <br>
     и мобильных приложений</h1>
     <h2 class="header__subactivity">Для Вашего бизнеса!</h2>
@@ -341,60 +349,69 @@ margin-bottom: 20px;
     <a class="header__projects" href="#projects">Посмотреть работы</a>
     </div>
  </div>
-</header>
- 
+</header> 
 <!-- Блок с услугами  -->
-<div id="service" class="container-fluid"> 
+<div id="service" class="container-fluid section_paddings"> 
   <div class="container"> 
-    <div class="row wow slideInUp" data-wow-duration="2s" data-wow-delay="0s" data-wow-offset="60">
-    <div  class="col-md-4 col-sm-4"> 
-          <div  class="advantages">
-            <div class="adv adv1"></div>
+  	<div class="our_services">
+  	 <h2 class="portfolio_section">Наши услуги</h2>
+     <div class="wow slideInUp" data-wow-duration="2s" data-wow-delay="0s" data-wow-offset="60">
+   <div class="row">
+        <div  class="col-md-4 col-sm-4"> 
+          <div  class="service_icons">
+            <div class="serv serv1"></div>
           </div>
            <p class="adv_text">Разработка сайтов </p>
+           <span class="adv_textunderline"></span>
            <p class="adv_text_desc">Мы умеем <br>делать крутые <br> сайты</p>
          </div>
          <div class="col-md-4 col-sm-4"> 
-          <div class="advantages">
-            <div class="adv adv2"></div>
+          <div class="service_icons">
+            <div class="serv serv2"></div>
           </div>
            <p class="adv_text">Раработка мобильных приложений </p>
+           <span class="adv_textunderline"></span>
             <p class="adv_text_desc">Для Apple iOS и <br>Google Android<br> OS</p>
          </div>
          <div  class="col-md-4 col-sm-4"> 
-          <div class="advantages">
-            <div class="adv adv3"></div>
+          <div class="service_icons">
+            <div class="serv serv3"></div>
           </div>
            <p class="adv_text">Digital Marketing </p>
+           <span class="adv_textunderline"></span>
            <p class="adv_text_desc">Продвижение <br>бренда в<br> цифровом<br> пространстве</p>
          </div>
        </div>
-       <div class="row wow slideInUp" data-wow-duration="2s" data-wow-delay="0s" data-wow-offset="60">
+       <div class="row">
          <div class="col-md-4 col-sm-4"> 
-          <div class="advantages">
-            <div class="adv adv4"></div>
+          <div class="service_icons">
+            <div class="serv serv4"></div>
           </div>
            <p class="adv_text">Разработка ПО </p>
+           <span class="adv_textunderline"></span>
            <p class="adv_text_desc">Для решения <br>сложных и<br> комплексных<br> задач</p>
          </div>
          <div class="col-md-4 col-sm-4"> 
-          <div class="advantages">
-            <div class="adv adv5"></div>
+          <div class="service_icons">
+            <div class="serv serv5"></div>
           </div>
            <p class="adv_text">Интеграция </p>
+           <span class="adv_textunderline"></span>
            <p class="adv_text_desc">Внедрим <br>комплексные<br> решения</p>
          </div>
          <div class="col-md-4 col-sm-4"> 
-          <div class="advantages">
-            <div class="adv adv6"></div>
+          <div class="service_icons">
+            <div class="serv serv6"></div>
           </div>
            <p class="adv_text">Сопровождение </p>
+           <span class="adv_textunderline"></span>
            <p class="adv_text_desc">В течении всего<br> срока жизни<br> проекта</p>
-         </div>
         </div>
-      </div>     
+        </div>
+       </div>
+      </div> 
+    </div>    
 </div>
-
 <div id="projects" class="who portfolio section_paddings ">
   <div class="container">
     <h2 class="portfolio_section">Наши работы</h2>
@@ -404,7 +421,7 @@ margin-bottom: 20px;
           <div class="col-md-4 col-sm-4 pad" data-target=".modal_obj1" data-toggle="modal">            
             <div class="image">
               <div class="name">Интернет-магазин по продажам <br>Торгового оборудования</div>
-              <img class="album_image" src="img/portfolio_item1.jpg" alt="Наши работы">
+              <img class="album_image" src="img/portfolio/portfolio_item1.jpg" alt="Наши работы">
               <div class="hov">
                 <a  class="h-btn">Интернет-магазин по продажам <br>Торгового оборудования</a>
               </div>
@@ -415,7 +432,7 @@ margin-bottom: 20px;
           <div class="col-md-4 col-sm-4 pad" data-target=".modal_obj2" data-toggle="modal">           
             <div class="image">
                <div class="name">Лендинг по продажам <br> автомоек</div>
-             <img class="album_image" src="img/portfolio_item1.jpg" alt="Наши работы">
+             <img class="album_image" src="img/portfolio/portfolio_item1.jpg" alt="Наши работы">
               <div class="hov">
                 <a  class="h-btn">Лендинг по продажам <br> автомоек</a>
               </div>
@@ -426,7 +443,7 @@ margin-bottom: 20px;
           <div class="col-md-4 col-sm-4 pad" data-target=".modal_obj3" data-toggle="modal">          
             <div class="image">
                 <div class="name">Интернет-магазин по <br> продажам Поликарбоната</div>
-              <img class="album_image" src="img/portfolio_item1.jpg" alt="Наши работы">
+              <img class="album_image" src="img/portfolio/portfolio_item1.jpg" alt="Наши работы">
               <div class="hov">
                 <a  class="h-btn">Интернет-магазин по <br> продажам Поликарбоната</a>
               </div>
@@ -439,7 +456,7 @@ margin-bottom: 20px;
           <div class="col-md-4 col-sm-4 pad" data-target=".modal_obj4" data-toggle="modal">           
             <div class="image">
                <div class="name">Корпоративный сайт <br> + магазин</div>
-             <img class="album_image" src="img/portfolio_item1.jpg" alt="Наши работы">
+             <img class="album_image" src="img/portfolio/portfolio_item1.jpg" alt="Наши работы">
               <div class="hov">
                 <a  class="h-btn">Корпоративный сайт <br> + магазин</a>
               </div>
@@ -450,7 +467,7 @@ margin-bottom: 20px;
           <div class="col-md-4 col-sm-4 pad" data-target=".modal_obj5" data-toggle="modal">           
             <div class="image">
                <div class="name">Мобильное приложение</div>
-              <img class="album_image" src="img/portfolio_item1.jpg" alt="Наши работы">
+             <img class="album_image" src="img/portfolio/portfolio_item1.jpg" alt="Наши работы">
               <div class="hov">
                 <a  class="h-btn">Мобильное приложение</a>
               </div>
@@ -461,7 +478,7 @@ margin-bottom: 20px;
           <div class="col-md-4 col-sm-4 pad" data-target=".modal_obj6" data-toggle="modal">           
             <div class="image">
                <div class="name">Система автоматизации <br> производством</div>
-              <img class="album_image" src="img/portfolio_item1.jpg" alt="Наши работы">
+             <img class="album_image" src="img/portfolio/portfolio_item1.jpg" alt="Наши работы">
               <div class="hov">
                 <a  class="h-btn">Система автоматизации <br> производством</a>
               </div>
@@ -474,7 +491,6 @@ margin-bottom: 20px;
     </div>
    </div>
 </div>
-
 <div id="questions" class="container-fluid section_paddings">    
   <div class="container ">
        <p class="form_client">Оставьте заявку </p>    
@@ -483,79 +499,65 @@ margin-bottom: 20px;
       <div class="col-md-12">
            <form class="make_order" action="call.php" method="POST">
               <input placeholder="Имя" name="user_name" class="form_inputs" type="text" required="required"/>
-              <input placeholder="Телефон" name="user_phone" class="form_inputs" type="text" required="required" />
+              <input placeholder="Телефон" name="user_phone" class="form_inputs" type="tel" required="required" />
               <input class="form__backcall" type="submit" name="formFooter" value="Оставить заявку" />
               <div class="clearfix"></div>    
       </form> 
       </div>
   </div>
 </div>
-
-
-  <div class="container-fluid section_paddings" id="steps">
+<div class="container-fluid section_paddings" id="steps">
     <div class="container">
       <h2 class="schema">Схема нашей работы</h2>
        <h3 class="schema__sub">Можно несколько слов о том, что для Вас трудится целая <br> команда профессионалов</h3>
       <div class="row">
-       <div class="col-md-12 schema__steps">
-       
+       <div class="col-md-12 schema__steps">       
          <div class="col-md-2">
           <p class="steps__title">Шаг 1</p>
-          <p class="steps__text">Несколько слов  о шаге</p>
+          <p class="steps__text">Выявление целей</p>
          </div>
-
          <div class="col-md-2">
           <p class="steps__title">Шаг 2</p>
-          <p class="steps__text">Несколько слов  о шаге</p>
+          <p class="steps__text">Разработка концепции</p>
          </div>
-
          <div class="col-md-2">
           <p class="steps__title">Шаг 3</p>
-          <p class="steps__text">Несколько слов  о шаге</p>
+          <p class="steps__text">Создание дизайна</p>
          </div>
-
          <div class="col-md-2">
           <p class="steps__title">Шаг 4</p>
-          <p class="steps__text">Несколько слов  о шаге</p>
+          <p class="steps__text">Создание сайта</p>
          </div>
-
          <div class="col-md-2">
           <p class="steps__title">Шаг 5</p>
-          <p class="steps__text">Несколько слов  о шаге</p>
+          <p class="steps__text">Тестирование</p>
          </div>
-
          <div class="col-md-2">
           <p class="steps__title">Шаг 6</p>
-          <p class="steps__text">Несколько слов  о шаге</p>
+          <p class="steps__text">Развитие</p>
          </div>
    
    <!--  <div class="col-md-12 steps_schema"> -->
     <div class="white_block">
           <div class="row ">
-       <div class="col-md-12 ">
-       
+       <div class="col-md-12 ">       
          <div class="col-md-2">
-          <p class="steps__round1">&#10004;</p>
+          <p class="steps__round1" data-target=".modal_callback" data-toggle="modal">&#10004;</p>
          </div>
-
          <div class="col-md-2">
-          <p class="steps__round1">&#10004;</p>
+          <p class="steps__round1" data-target=".modal_callback" data-toggle="modal">&#10004;</p>
          </div>
-
          <div class="col-md-2">
-          <p class="steps__round1">&#10004;</p>
+          <p class="steps__round1" data-target=".modal_callback" data-toggle="modal">&#10004;</p>
          </div>
-
          <div class="col-md-2">
-          <p class="steps__round2">&#10004;</p>
+          <p class="steps__round2" data-target=".modal_callback" data-toggle="modal">&#10004;</p>
          </div>
-
          <div class="col-md-2">
-          <p class="steps__round2">&#10004;</p>
+          <p class="steps__round2" data-target=".modal_callback" data-toggle="modal">&#10004;</p>
          </div>
-
          <div class="col-md-2">
-          <p class="steps__round2">&#10004;</p>
+          <p class="steps__round2" data-target=".modal_callback" data-toggle="modal">&#10004;</p>
          </div>
          </div>
           <!-- </div> --><!-- 12md--> 
@@ -565,95 +567,60 @@ margin-bottom: 20px;
    </div><!-- container--> 
 </div><!-- container-fluid--> 
 </div>
-
 <div id="review" class="section_paddings container-fluid">
 <h2 class="portfolio_section">Отзывы клиентов</h2>
-
 <div class="center slider">
     <div>
-       <img class="client_photo " alt="Клиент" src="img/client.jpg">
+       <img class="client_photo " alt="Клиент" src="img/Samkov.jpg">
       <div class="client_review">
       <p class="short_text">Огромная благодарность за услугу!</p>
-      <p class="review_text">По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
-      <p class="review_sign">Пантелеймон Пантелемонович <br>
-              компания Такая-то managment group</p>
-                 
+      <p class="review_text">Мы сотрудничаем с командой “Eramobi” момента ее зарождения, и на наших глазах они из хороших специалистов выросли в отличных. И мы рады, что этот путь прошли с ними рука об руку.
+      </p>
+      <p class="review_sign">Дмитрий Самков <br>
+              SEO RGroup, Москва</p>                 
     </div>
     </div>
     <div>
-       <img class="client_photo " alt="Клиент" src="img/client.jpg">
+       <img class="client_photo" alt="Клиент" src="img/Sitak.jpg">
      <div class="client_review">
-      <p class="short_text">Огромная благодарность за услугу!</p>
-      <p class="review_text">По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
-      <p class="review_sign">Пантелеймон Пантелемонович <br>
-              компания Такая-то managment group</p>
-                  
+      <p class="short_text">Спасибо!</p>
+      <p class="review_text">У нас бюджетное учреждение, поэтому процессы забюрократизированы, несмотря на это, команда смогла выдержать сроки. </p>
+      <p class="review_sign">Мария Ситак <br>
+              заместитель руководителя отдела по молодежной политики г. Оренбург 
+        </p>                  
     </div>
     </div>
     <div>
-      <img class="client_photo " alt="Клиент" src="img/client.jpg">
+      <img class="client_photo " alt="Клиент" src="img/Vinogradov.jpg">
       <div class="client_review">
-      <p class="short_text">Огромная благодарность за услугу!</p>
-      <p class="review_text">По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
-      <p class="review_sign">Пантелеймон Пантелемонович <br>
-              компания Такая-то managment group</p>
-                   
+      <p class="short_text">Очень благодарны!</p>
+      <p class="review_text">Команда “Eramobi”  умеет делать свою работу, мы неоднократно убеждались в этом и поэтому доверяем этой команде.</p>
+      <p class="review_sign">Андрей Виноградов <br>
+              ООО "СПК", г. Томск </p>                  
     </div>
     </div>
      <div>
-      <img class="client_photo" alt="Клиент" src="img/client.jpg">
+      <img class="client_photo" alt="Клиент" src="img/Shvarev.jpg">
       <div class="client_review">
-      <p class="short_text">Огромная благодарность за услугу!</p>
-      <p class="review_text">По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
-      <p class="review_sign">Пантелеймон Пантелемонович <br>
-              компания Такая-то managment group</p>
-                   
+      <p class="short_text">Спасибо большое!</p>
+      <p class="review_text">Команда, настоящие профессионалы и надежные партнеры в области мобильных приложений </p>
+      <p class="review_sign">Михаил Швырев <br>
+              Биржевой аналитик </p>                     
     </div>
-    </div>
-     <div>
-      <img class="client_photo" alt="Клиент" src="img/client.jpg">
-      <div class="client_review">
-      <p class="short_text">Огромная благодарность за услугу!</p>
-      <p class="review_text">По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
-      <p class="review_sign">Пантелеймон Пантелемонович <br>
-              компания Такая-то managment group</p>
-                   
-    </div>
-    </div>
-     <div>
-      <img class="client_photo" alt="Клиент" src="img/client.jpg">
-      <div class="client_review">
-      <p class="short_text">Огромная благодарность за услугу!</p>
-      <p class="review_text">По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
-      <p class="review_sign">Пантелеймон Пантелемонович <br>
-              компания Такая-то managment group</p>
-                   
-    </div>
-    </div>
-    <div>
-       <img class="client_photo " alt="Клиент" src="img/client.jpg">   
-      <div class="client_review">
-      <p class="short_text">Огромная благодарность за услугу!</p>
-      <p class="review_text">По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
-      <p class="review_sign">Пантелеймон Пантелемонович <br>
-              компания Такая-то managment group</p>               
-    </div>
-    </div>       
+   </div> 
   </div>
 </div>
-<div class="container-fluid section_paddings " id="order">    
+<div class="container-fluid section_paddings" id="order">    
 <div class="container ">
   <div class="col-md-12">
     <div class="col-md-6">
        <p class="form_client2">Оставьте заявку </p>    
        <p class="form_clientReply2">и мы свяжемся с Вами <br> в течение часа</p>   
        </div>  
-      <div class="col-md-6"> 
-      <p class="form_insert_upper">Введите </p>  
-      <p class="form_insert">свое имя <br> и номер телефона: </p>    
+      <div class="col-md-6">       
            <form class="make_order" action="call.php" method="POST">
               <input placeholder="Имя" name="user_name" class="form_inputs2" type="text" required="required"/>
-              <input placeholder="Телефон" name="user_phone" class="form_inputs2" type="text" required="required" />
+              <input placeholder="Телефон" name="user_phone" class="form_inputs2" type="tel" required="required" />
               <input class="form__backcall2" type="submit" name="formFooter" value="Оставить заявку" />
               <div class="clearfix"></div>    
       </form>       
@@ -661,7 +628,6 @@ margin-bottom: 20px;
     </div>
   </div>
 </div>
-
 <div class="clearfix"></div>
 <div id="map" class="container-fluid">
   <script charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A09cbe83455164b133725cf8782aca9a9ced8820f29470c54d430b6c9e223f9e7&amp;width=100%25&amp;height=473&amp;lang=ru_RU&amp;scroll=false"></script>      
@@ -683,7 +649,6 @@ margin-bottom: 20px;
                 <li><a href="#review"> Отзывы</a> </li>                 
                 <li><a href="#" data-target=".modal_callback" data-toggle="modal"> Заказать звонок</a> </li>                
               </ul>
-
             </div>
             <div class="col-md-4">
               <p id="contacts" class="footer__sections">Контакты</p>
@@ -712,7 +677,6 @@ margin-bottom: 20px;
 </footer>
 <div class="container-fluid footer_bottom">
 </div>
-
 <!-- callback -->
 <div class="modal fade modal_callback" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
@@ -725,16 +689,15 @@ margin-bottom: 20px;
         <div class="form mt-20">
           <form class="make_order" action="call.php" method="POST">
               <input placeholder="Имя" name="user_name" class="form_inputs form_modal" type="text" required="required"/>
-              <input placeholder="Телефон" name="user_phone" class="form_inputs form_modal" type="text" required="required" />
+              <input placeholder="Телефон" name="user_phone" class="form_inputs form_modal" type="tel" required="required" />
               <input class="form__backcall form__backcallmodal" type="submit" name="formFooter" value="Заказать" />
               <div class="clearfix"></div>    
-      </form> 
+           </form> 
         </div>
       </div>
     </div>
   </div>
 </div>
-
 <!-- модалка ответ "Ваша заявка отправлена"-->
 <div id="deliver_message" class="modal fade modal_answer" tabindex="-1" role="dialog">
   <div id="sent_message" class="modal-dialog" role="document">
@@ -755,7 +718,6 @@ margin-bottom: 20px;
     </div>
   </div>
 </div>
-
 <!-- модалка на политику конфиденциальности-->
 <div class="modal fade modal_policy"  tabindex="-1" role="dialog" >
   <div class="modal-dialog">
@@ -785,7 +747,7 @@ margin-bottom: 20px;
       <div class="row">
         <div class="col-md-7">
           <div class="big_img">
-            <img id="img-big" alt="Пример работы" src="img/portfolio/example.jpg">
+            <img id="img-big" alt="Пример работы" src="img/portfolio/example6.jpg">
           </div>          
         </div>
         <div class="col-md-5">
@@ -797,7 +759,6 @@ margin-bottom: 20px;
     </div>
   </div>
 </div>
-
 <div class="modal fade modal_obj1" tabindex="-1" role="dialog" >
   <div class="modal-dialog modal-lg">
     <div class="modal-content big">
@@ -806,8 +767,7 @@ margin-bottom: 20px;
         <div class="col-md-7">
           <div class="big_img">
             <img  alt="Пример работы" src="img/portfolio/portfolio_item1.jpg">
-          </div>
-          
+          </div>          
         </div>
         <div class="col-md-5">
           <div class="title">Интернет магазин по продажам торгового оборудования</div>       
@@ -818,7 +778,6 @@ margin-bottom: 20px;
     </div>
   </div>
 </div>
-
 <div class="modal fade modal_obj3" tabindex="-1" role="dialog" >
   <div class="modal-dialog modal-lg">
     <div class="modal-content big">
@@ -827,8 +786,7 @@ margin-bottom: 20px;
         <div class="col-md-7">
           <div class="big_img">
             <img alt="Пример работы" src="img/portfolio/example2.jpg">
-          </div>
-          
+          </div>          
         </div>
         <div class="col-md-5">
           <div class="title">Интернет-магазин по продажам Поликарбоната</div>         
@@ -839,7 +797,6 @@ margin-bottom: 20px;
     </div>
   </div>
 </div>
-
 <div class="modal fade modal_obj4" tabindex="-1" role="dialog" >
   <div class="modal-dialog modal-lg">
     <div class="modal-content big">
@@ -859,7 +816,6 @@ margin-bottom: 20px;
     </div>
   </div>
 </div>
-
 <div class="modal fade modal_obj5" tabindex="-1" role="dialog" >
   <div class="modal-dialog modal-lg">
     <div class="modal-content big">
@@ -868,8 +824,7 @@ margin-bottom: 20px;
         <div class="col-md-7">
           <div class="big_img">
             <img alt="Пример работы" src="img/portfolio/portfolio_item1.jpg">
-          </div>
-          
+          </div>          
         </div>
         <div class="col-md-5">
           <div class="title">Мобильное приложение</div>
@@ -880,7 +835,6 @@ margin-bottom: 20px;
     </div>
   </div>
 </div>
-
 
 <div class="modal fade modal_obj6" tabindex="-1" role="dialog" >
   <div class="modal-dialog modal-lg">
@@ -893,11 +847,9 @@ margin-bottom: 20px;
           </div>          
         </div>
         <div class="col-md-5">
-          <div class="title">Система автоматизации производством</div>
-          
+          <div class="title">Система автоматизации производством</div>          
           <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</div>
-          <a target="_blank" class="projects__link" href="https://yandex.ru">https://yandex.ru</a>       
-          
+          <a target="_blank" class="projects__link" href="https://yandex.ru">https://yandex.ru</a>  
         </div>
       </div>
     </div>
@@ -908,39 +860,53 @@ margin-bottom: 20px;
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="js/scrollspy.min.js"></script>
 <script src="js/script.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script>
+new WOW().init();
+var scroll = window.pageYOffset, array = [];
+wow.boxes.forEach(function (box) {
+var pos = $(box).position(), height = $(box).height();
+if (pos.top + height < scroll) {
+$(box).addClass("visible");
+} else {
+array.push(box);
+}
+});
+wow.boxes = array;
+</script>
 <script src="js/slick.js"></script>
 <script>
 $('.center').slick({
-  dots: false,
-  infinite: true,
-  speed: 1000,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  centerMode: true,
-  focusOnSelect: true,
-  responsive: [
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        adaptiveHeight: true
-      }
-    }
-   ]
-});
-</script>
-<script src="js/wow.min.js"></script>
-<script>
-    new WOW().init();
-</script>
-<script>
-$('.make_order').on('submit', function(event) { 
-$('#deliver_message').modal('show');                                    
+dots: false,
+infinite: true,
+speed: 300,
+slidesToShow: 3,
+slidesToScroll: 1,
+centerMode: true,       
+autoplay: true,
+autoplaySpeed: 3000,
+responsive: [
+{
+breakpoint: 991,
+settings: {
+slidesToShow: 1,
+slidesToScroll: 1,
+infinite: true,
+dots: true
+}     
+}
+
+]
 });
 </script>
 
-  </body>
+<script>
+$('.make_order').on('submit', function(event) { 
+$('.modal_callback').css('display','none');
+$('#deliver_message').modal('show');                                    
+});
+</script>
+<script>
+</script>
+</body>
 </html>
